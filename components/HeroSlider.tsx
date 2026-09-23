@@ -86,7 +86,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative w-full h-[80vh] min-h-[560px] max-h-[820px] bg-[#221a17] overflow-hidden select-none"
+      className="relative w-full h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] bg-[#221a17] overflow-hidden select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Hero Carousel"
@@ -102,7 +102,7 @@ export default function HeroSlider() {
             }`}
           >
             {/* Background Image */}
-            <div className={`relative w-full h-full transform transition-transform duration-7000 ease-out ${isActive ? 'scale-105' : 'scale-100'}`}>
+            <div className="relative w-full h-full">
               <Image
                 src={slide.image}
                 alt={slide.title}
@@ -117,7 +117,7 @@ export default function HeroSlider() {
 
             {/* Slide Content */}
             <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
-              <div className="max-w-3xl mx-auto text-[#faf7f2]">
+              <div className={`max-w-3xl mx-auto text-[#faf7f2] transition-all duration-500 ease-out ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                 <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#ebdcd2] mb-3 drop-shadow">
                   {slide.tagline}
                 </p>
@@ -168,13 +168,13 @@ export default function HeroSlider() {
       </button>
 
       {/* Bottom Controls */}
-      <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 z-20 flex items-center justify-center gap-4">
+      <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 z-20 flex items-center justify-center">
         <div className="flex items-center gap-2">
           {SLIDES.map((_, dotIndex) => (
             <button
               key={dotIndex}
               onClick={() => setCurrent(dotIndex)}
-              className={`transition-all duration-300 rounded-full ${
+              className={`transition-all duration-300 rounded-full cursor-pointer ${
                 dotIndex === current
                   ? 'w-8 h-2 bg-[#ebdcd2]'
                   : 'w-2 h-2 bg-white/40 hover:bg-white/80'
@@ -183,9 +183,6 @@ export default function HeroSlider() {
             />
           ))}
         </div>
-        <span className="text-xs font-mono text-[#ebdcd2]/80 tracking-widest pl-2">
-          0{current + 1} / 0{SLIDES.length}
-        </span>
       </div>
     </section>
   );

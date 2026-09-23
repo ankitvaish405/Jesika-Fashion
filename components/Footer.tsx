@@ -1,69 +1,10 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 5000);
-    }
-  };
-
   return (
     <footer className="bg-[#241c19] text-[#e8dfd5] font-sans border-t border-[#382b26]">
-      {/* Top VIP Newsletter Section */}
-      <div className="border-b border-[#382b26]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6">
-              <span className="text-xs uppercase tracking-[0.25em] text-[#cbb193] font-semibold mb-2 block">
-                Maison Newsletter
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-[#faf7f2] mb-2">
-                Join The Jesika Private Circle
-              </h3>
-              <p className="text-sm text-[#beb1a7] max-w-md font-light leading-relaxed">
-                Be the first to receive exclusive previews of haute couture drops, invitation-only cosmetic launches, and complimentary private consultations.
-              </p>
-            </div>
-
-            <div className="lg:col-span-6">
-              {subscribed ? (
-                <div className="flex items-center gap-3 p-4 bg-[#2f2420] border border-[#cbb193]/40 text-[#ebdcd2] text-sm">
-                  <CheckCircle2 className="w-5 h-5 text-[#cbb193] shrink-0" />
-                  <span>Thank you for subscribing! Your complimentary invitation will arrive shortly.</span>
-                </div>
-              ) : (
-                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    className="w-full min-w-0 bg-[#1b1412] border border-[#44352f] px-4 py-3.5 text-sm text-[#faf7f2] placeholder-[#8e7e75] outline-none focus:border-[#cbb193] transition-colors"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 bg-[#9d735d] hover:bg-[#855d4a] text-white font-semibold text-xs uppercase tracking-widest transition-colors flex items-center justify-center gap-2 shrink-0 cursor-pointer shadow-md"
-                  >
-                    <span>Subscribe</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer Links & Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

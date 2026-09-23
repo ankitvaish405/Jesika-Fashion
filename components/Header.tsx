@@ -33,8 +33,8 @@ export default function Header() {
               <span className="text-lg sm:text-2xl font-serif font-bold text-[#29201d] tracking-tight group-hover:text-[#9d735d] transition-colors block leading-tight truncate">
                 Jesika Fashion
               </span>
-              <span className="text-[8px] sm:text-[10px] tracking-[0.08em] sm:tracking-[0.2em] uppercase text-[#9d735d] font-sans font-semibold block truncate">
-                All In One Store & Beauty Parlour
+              <span className="text-[9px] sm:text-[11px] tracking-wide text-[#9d735d] font-sans font-medium block truncate">
+                All in one store & beauty parlour
               </span>
             </Link>
           </div>

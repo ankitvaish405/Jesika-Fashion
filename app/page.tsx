@@ -1,13 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Shirt, Scissors, Star, CheckCircle, HeartHandshake, Award, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Shirt, Crown, Baby, Scissors, Star, CheckCircle, Clock } from 'lucide-react';
 import HeroSlider from '@/components/HeroSlider';
+import ReviewsSlider from '@/components/ReviewsSlider';
 
 const HIGHLIGHTS = [
-  { icon: Shirt, title: "Women's Collection", desc: 'Sarees, Lehengas, Suits & Western wear' },
-  { icon: Award, title: "Men's Fashion", desc: 'Kurta Pajamas, Sherwanis & Formal wear' },
-  { icon: HeartHandshake, title: "Kids' Wear", desc: 'Festive & Party wear for boys and girls' },
+  { icon: Crown, title: "Women's Collection", desc: 'Sarees, Lehengas, Suits & Western wear' },
+  { icon: Shirt, title: "Men's Fashion", desc: 'Kurta Pajamas, Sherwanis & Formal wear' },
+  { icon: Baby, title: "Kids' Wear", desc: 'Festive & Party wear for boys and girls' },
   { icon: Sparkles, title: 'Beauty Parlour', desc: 'Bridal makeover, hair styling & skincare' },
 ];
 
@@ -87,22 +88,6 @@ const STEPS = [
   },
 ];
 
-const TESTIMONIALS = [
-  {
-    quote: 'Jesika Fashion is our family’s go-to store in Varanasi! We bought clothes for my daughter’s wedding, and her bridal makeover was done in their parlour — completely stunning!',
-    author: 'Sunita Mishra',
-    role: 'Varanasi Resident & Bride’s Mother',
-    image: '/14.jpeg',
-    rating: 5,
-  },
-  {
-    quote: 'Found an amazing silk kurta pajama set for myself and cute dresses for my kids. High quality fabrics, great prices, and very polite staff.',
-    author: 'Rajesh Verma',
-    role: 'Verified Customer, Varanasi',
-    image: '/15.jpeg',
-    rating: 5,
-  },
-];
 
 const INSTAGRAM_IMAGES = [
   { id: 16, src: '/16.jpeg', tag: '#MensWear' },
@@ -119,20 +104,24 @@ export default function HomePage() {
       {/* 1. Hero Section Carousel (Images 1, 2, 7, 9) */}
       <HeroSlider />
 
-      {/* 2. Brand Value Pillars */}
-      <section className="border-y border-[#e8ded2] bg-[#f5ede5] py-8">
+      {/* 2. Brand Value Pillars / Trust Badges */}
+      <section className="border-y border-[#e8ded2] bg-[#f5ede5] py-8 sm:py-9">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {HIGHLIGHTS.map((h, i) => {
               const Icon = h.icon;
               return (
                 <div key={i} className="flex items-center gap-3.5">
-                  <div className="p-2.5 bg-white border border-[#e8ded2] shadow-xs shrink-0 text-[#9d735d]">
-                    <Icon className="w-5 h-5" />
+                  <div className="w-12 h-12 flex items-center justify-center bg-white border border-[#e8ded2]  shrink-0 shadow-xs">
+                    <Icon className="w-6 h-6" strokeWidth={1.75} />
                   </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#29201d]">{h.title}</h4>
-                    <p className="text-[11px] text-[#736359]">{h.desc}</p>
+                  <div className="min-w-0">
+                    <h4 className="text-[15px] sm:text-base font-semibold text-[#29201d] whitespace-nowrap tracking-normal">
+                      {h.title}
+                    </h4>
+                    <p className="text-xs text-[#736359] mt-0.5 leading-snug">
+                      {h.desc}
+                    </p>
                   </div>
                 </div>
               );
@@ -142,13 +131,12 @@ export default function HomePage() {
       </section>
 
       {/* 3. The 4 Departments: Women's, Men's, Kids', Beauty Parlour */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center max-w-xl mx-auto mb-14">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold mb-2">Complete Family Destination</p>
-          <h2 className="text-3xl font-serif font-bold uppercase tracking-wider text-[#29201d]">
+      <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center max-w-4xl mx-auto mb-14">
+          <h2 className="text-3xl font-serif font-bold uppercase tracking-wider">
             Our Core Verticals
           </h2>
-          <p className="text-xs text-[#736359] mt-2 font-light">All in one store for Men&apos;s wear, Women&apos;s wear, Kids&apos; wear, and Beauty Parlour services.</p>
+          <p className="text-md text-[#736359] mt-2 font-light max-w-full sm:whitespace-nowrap">All in one store for Men&apos;s wear, Women&apos;s wear, Kids&apos; wear, and Beauty Parlour services.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -159,12 +147,10 @@ export default function HomePage() {
               alt="Women's Wear Collection"
               fill
               sizes="(max-width: 640px) 100vw, 25vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#241c19]/85 via-[#241c19]/30 to-transparent p-6 flex flex-col justify-end text-white">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#ebdcd2] font-semibold mb-1">
-                Sarees & Lehengas
-              </span>
+
               <h3 className="text-xl font-serif font-bold uppercase tracking-wider mb-2">
                 Women&apos;s Wear
               </h3>
@@ -181,12 +167,10 @@ export default function HomePage() {
               alt="Men's Wear Collection"
               fill
               sizes="(max-width: 640px) 100vw, 25vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#241c19]/85 via-[#241c19]/30 to-transparent p-6 flex flex-col justify-end text-white">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#ebdcd2] font-semibold mb-1">
-                Kurtas & Sherwanis
-              </span>
+
               <h3 className="text-xl font-serif font-bold uppercase tracking-wider mb-2">
                 Men&apos;s Wear
               </h3>
@@ -203,12 +187,10 @@ export default function HomePage() {
               alt="Kids' Wear Collection"
               fill
               sizes="(max-width: 640px) 100vw, 25vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#241c19]/85 via-[#241c19]/30 to-transparent p-6 flex flex-col justify-end text-white">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#ebdcd2] font-semibold mb-1">
-                Boys & Girls
-              </span>
+
               <h3 className="text-xl font-serif font-bold uppercase tracking-wider mb-2">
                 Kids&apos; Wear
               </h3>
@@ -225,12 +207,9 @@ export default function HomePage() {
               alt="Beauty Parlour & Salon"
               fill
               sizes="(max-width: 640px) 100vw, 25vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#241c19]/85 via-[#241c19]/30 to-transparent p-6 flex flex-col justify-end text-white">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#ebdcd2] font-semibold mb-1">
-                Bridal & Salon Care
-              </span>
               <h3 className="text-xl font-serif font-bold uppercase tracking-wider mb-2">
                 Beauty Parlour
               </h3>
@@ -247,16 +226,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold mb-2">
-                Handpicked Favorites
-              </p>
-              <h2 className="text-3xl font-serif font-bold uppercase tracking-wider text-[#29201d]">
+              <h2 className="text-3xl font-serif tracking-wider text-[#29201d]">
                 Featured In-Store Arrivals
               </h2>
             </div>
             <Link
               href="/gallery"
-              className="mt-4 md:mt-0 text-xs font-bold uppercase tracking-widest text-[#9d735d] hover:text-[#845d49] inline-flex items-center gap-2"
+              className="mt-4 md:mt-0 text-xs font-bold uppercase tracking-widest  hover:text-[#845d49] inline-flex items-center gap-2"
             >
               <span>View All Collections</span>
               <ArrowRight className="w-4 h-4" />
@@ -272,7 +248,7 @@ export default function HomePage() {
                     alt={item.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-4 flex-1 flex flex-col justify-between">
@@ -281,7 +257,7 @@ export default function HomePage() {
                       <Star className="w-3 h-3 fill-current" />
                       <span className="text-[11px] font-semibold text-[#736359]">{item.rating}</span>
                     </div>
-                    <p className="text-[10px] uppercase tracking-wider text-[#9d735d] font-semibold">
+                    <p className="text-[10px] uppercase tracking-wider  font-semibold">
                       {item.category}
                     </p>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-[#29201d] mt-1 line-clamp-1">
@@ -292,7 +268,7 @@ export default function HomePage() {
                     <span className="text-sm font-bold text-[#29201d]">{item.price}</span>
                     <a
                       href="tel:+918924099911"
-                      className="text-[11px] uppercase tracking-wider font-semibold text-[#9d735d] hover:text-[#845d49]"
+                      className="text-[11px] uppercase tracking-wider font-semibold  hover:text-[#845d49]"
                     >
                       Inquire
                     </a>
@@ -308,13 +284,10 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold block">
-              Jesika Fashion Difference
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold uppercase tracking-wider leading-snug text-[#29201d]">
-              Why Families In Varanasi Trust Jesika
+            <h2 className="text-2xl sm:text-4xl font-serif  tracking-wider leading-snug text-[#29201d]">
+              Why Families Trust Jesika
             </h2>
-            <p className="text-sm text-[#736359] font-light leading-relaxed">
+            <p className="text-sm sm:text-base font-light leading-relaxed">
               We bring together all family clothing needs along with expert beauty parlour services in one welcoming space, saving you time while guaranteeing superior quality and fair pricing.
             </p>
 
@@ -323,12 +296,12 @@ export default function HomePage() {
                 const Icon = item.icon;
                 return (
                   <div key={i} className="flex items-start gap-3.5">
-                    <div className="p-2 bg-[#f5ede5] border border-[#e8ded2] shrink-0 mt-0.5 text-[#9d735d]">
+                    <div className="p-2 bg-[#f5ede5] border border-[#e8ded2] shrink-0 mt-0.5 ">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#29201d]">{item.title}</h4>
-                      <p className="text-xs text-[#736359] mt-0.5 leading-relaxed font-light">{item.desc}</p>
+                      <h4 className="text-xs sm:text-base font-bold tracking-wider text-[#29201d]">{item.title}</h4>
+                      <p className="text-xs sm:text-base text-[#736359] mt-0.5 leading-relaxed font-light">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -363,13 +336,10 @@ export default function HomePage() {
       <section className="bg-[#241c19] text-[#faf7f2] py-20 border-t border-[#382b26]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#cbb193] font-semibold mb-2">
-              Simple & Complete
-            </p>
             <h2 className="text-3xl font-serif font-bold uppercase tracking-wider text-[#faf7f2]">
               How It Works
             </h2>
-            <p className="text-sm text-[#beb1a7] mt-2 font-light">
+            <p className="text-sm sm:text-base text-[#beb1a7] mt-2 font-light">
               One-stop shopping and beauty styling for every family occasion.
             </p>
           </div>
@@ -378,13 +348,13 @@ export default function HomePage() {
             {STEPS.map((step) => (
               <div key={step.number} className="p-8 border border-[#382b26] bg-[#1d1614] flex flex-col justify-between">
                 <div>
-                  <span className="text-3xl font-mono font-bold text-[#cbb193] block mb-4">
+                  <span className="text-3xl font-bold text-[#cbb193] block mb-4">
                     {step.number}
                   </span>
                   <h3 className="text-lg font-bold tracking-tight text-[#faf7f2] mb-2 font-serif">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-[#beb1a7] font-light leading-relaxed">
+                  <p className="text-xs sm:text-base font-light leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -397,45 +367,18 @@ export default function HomePage() {
       {/* 7. Client Reviews */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-xl mx-auto mb-14">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold mb-2">Happy Customers</p>
-          <h2 className="text-3xl font-serif font-bold uppercase tracking-wider text-[#29201d]">
-            Loved By Families Across Varanasi
+          <h2 className="text-3xl font-serif font-bold tracking-wider text-[#29201d]">
+            Loved By Families
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {TESTIMONIALS.map((t, index) => (
-            <div key={index} className="p-8 border border-[#e8ded2] bg-white flex flex-col sm:flex-row gap-6 items-center shadow-xs">
-              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden shrink-0 border-2 border-[#e8ded2]">
-                <Image
-                  src={t.image}
-                  alt={t.author}
-                  fill
-                  sizes="120px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex-1 text-center sm:text-left">
-                <div className="flex items-center justify-center sm:justify-start gap-1 text-amber-500 mb-2">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                  ))}
-                </div>
-                <p className="text-sm italic text-[#574941] mb-4 leading-relaxed font-serif">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#29201d]">{t.author}</h4>
-                <p className="text-[11px] text-[#8e7e75]">{t.role}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ReviewsSlider />
       </section>
 
       {/* 8. Instagram Community Grid */}
       <section className="border-t border-[#e8ded2] pt-16 pb-8 bg-[#f5ede5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold mb-1">Visual Community</p>
+          <p className="text-xs uppercase tracking-[0.25em]  font-semibold mb-1">Visual Community</p>
           <h3 className="text-2xl font-serif font-bold uppercase tracking-wider text-[#29201d]">
             Follow @JesikaFashion
           </h3>
