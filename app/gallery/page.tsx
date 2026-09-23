@@ -101,7 +101,8 @@ export default function GalleryPage() {
                 src={item.src}
                 alt={item.title}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                quality={95}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center" />
@@ -133,7 +134,8 @@ export default function GalleryPage() {
               src={selectedImage.src}
               alt={selectedImage.title}
               fill
-              sizes="(max-width: 1024px) 100vw, 80vw"
+              quality={100}
+              sizes="100vw"
               className="object-contain"
               priority
             />

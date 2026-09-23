@@ -178,7 +178,8 @@ export default function ParlourPage() {
                   src={cat.image}
                   alt={cat.category}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  quality={95}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

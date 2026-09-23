@@ -57,7 +57,8 @@ export default function AboutPage() {
                 alt="Jesika Couture Silhouette"
                 fill
                 priority
-                sizes="(max-width: 1024px) 50vw, 30vw"
+                quality={95}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -66,16 +67,14 @@ export default function AboutPage() {
                 src="/5.jpeg"
                 alt="Jesika Atelier Studio"
                 fill
-                sizes="(max-width: 1024px) 50vw, 30vw"
+                quality={95}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
           </div>
 
           <div className="lg:col-span-6 space-y-6 lg:pl-6">
-            <span className="text-xs uppercase tracking-widest text-neutral-500 font-semibold block">
-              The Genesis
-            </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-semibold tracking-tight text-neutral-900 leading-snug">
               Complete Family Fashion & Beauty Excellence Under One Roof
             </h2>
@@ -108,9 +107,6 @@ export default function AboutPage() {
       <section className="bg-[#f8f9fa] border-y border-neutral-200 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs uppercase tracking-widest text-neutral-500 font-semibold block mb-2">
-              Guiding Philosophy
-            </span>
             <h2 className="text-3xl sm:text-4xl font-sans font-semibold tracking-tight text-neutral-900">
               Our Vision & Mission
             </h2>
@@ -133,11 +129,6 @@ export default function AboutPage() {
                   To be Varanasi’s most trusted all-in-one fashion and beauty landmark, where every family discovers heirloom-grade clothing and bespoke salon artistry under one welcoming roof. We envision a seamless shopping experience where heritage Banarasi craftsmanship, contemporary trends, and personalized parlour care unite effortlessly.
                 </p>
               </div>
-              <div className="mt-8 pt-4 border-t border-neutral-100 flex items-center gap-2 text-xs font-medium text-neutral-500">
-                <span>Timeless Heritage</span>
-                <span>•</span>
-                <span>Modern Elegance</span>
-              </div>
             </div>
 
             {/* Mission Card */}
@@ -153,11 +144,6 @@ export default function AboutPage() {
                   To provide families with exquisite attire across Women’s, Men’s, and Kids’ collections with uncompromised fabric quality, honest pricing, and prompt in-house alteration services. Simultaneously, our mission is to empower every bride and customer with certified salon transformations and dermatologically sound beauty essentials.
                 </p>
               </div>
-              <div className="mt-8 pt-4 border-t border-neutral-100 flex items-center gap-2 text-xs font-medium text-neutral-500">
-                <span>Pure Craftsmanship</span>
-                <span>•</span>
-                <span>Customer First</span>
-              </div>
             </div>
           </div>
         </div>
@@ -167,9 +153,6 @@ export default function AboutPage() {
       <section className="bg-[#181210] text-[#faf7f2] border-y border-neutral-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs uppercase tracking-widest text-neutral-400 font-semibold block mb-2">
-              The Jesika Advantage
-            </span>
             <h2 className="text-3xl sm:text-4xl font-sans font-semibold tracking-tight text-white">
               Why Choose Us?
             </h2>
@@ -319,7 +302,6 @@ export default function AboutPage() {
       <section className="bg-[#f8f9fa] border-y border-neutral-200 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-14">
-            <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">The Creators</p>
             <h2 className="text-3xl font-sans font-semibold tracking-tight text-neutral-900">
               Master Artisans Behind The Brand
             </h2>
@@ -334,7 +316,8 @@ export default function AboutPage() {
                     src={artisan.image}
                     alt={artisan.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={95}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>

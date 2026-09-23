@@ -54,9 +54,6 @@ export default function ContactPage() {
       {/* Top Header Section */}
       <div className="border-b border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 py-12 text-center">
-          <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
-            Get in Touch
-          </p>
           <h1 className="text-3xl sm:text-4xl font-sans font-bold tracking-tight text-neutral-900">
             Contact Us
           </h1>

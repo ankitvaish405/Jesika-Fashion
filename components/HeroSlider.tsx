@@ -107,12 +107,13 @@ export default function HeroSlider() {
                 src={slide.image}
                 alt={slide.title}
                 fill
-                priority={index === 0}
+                priority={index <= 1}
+                quality={100}
                 sizes="100vw"
-                className="object-cover object-center brightness-90"
+                className="object-cover object-center"
               />
-              {/* Warm Mocha Velvet Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#221a17]/90 via-[#221a17]/50 to-[#221a17]/25" />
+              {/* Subtle Clean Gradient Scrim for crystal clear photos with text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/15" />
             </div>
 
             {/* Slide Content */}

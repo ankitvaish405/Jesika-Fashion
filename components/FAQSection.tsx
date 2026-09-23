@@ -65,10 +65,6 @@ export default function FAQSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-neutral-100 border border-neutral-200 text-neutral-700 text-xs font-medium tracking-wide rounded-full mb-3">
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>Frequently Asked Questions</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-sans font-semibold tracking-tight text-neutral-900">
             Got Questions? We Have Answers.
           </h2>
@@ -119,43 +115,7 @@ export default function FAQSection() {
         </div>
 
         {/* Still Have Questions - Luxury CTA */}
-        <div className="mt-14 relative overflow-hidden bg-[#181210] text-[#faf7f2] border border-neutral-800 rounded-2xl p-8 sm:p-12 text-center shadow-lg">
-          {/* Subtle Decorative Background Glow */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-
-          <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
-            {/* Content Top */}
-            <span className="text-xs uppercase tracking-widest text-neutral-400 font-semibold block mb-2">
-              Personalized Assistance
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-sans font-semibold tracking-tight text-white">
-              Have a different question or special request?
-            </h3>
-            <p className="text-sm sm:text-base text-neutral-300 mt-2.5 font-normal leading-relaxed max-w-xl">
-              Connect directly with our Varanasi store team for instant help with custom tailoring, bridal makeup consultations, or order inquiries.
-            </p>
-
-            {/* Buttons Bottom: Left & Right */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 w-full sm:w-auto">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-white hover:bg-neutral-100 text-neutral-900 text-xs font-semibold rounded-lg tracking-wide transition-all duration-200 shadow-md group cursor-pointer"
-              >
-                <MessageCircle className="w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-                <span>Chat on WhatsApp</span>
-              </a>
-              <a
-                href="tel:+918924099911"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-transparent hover:bg-white/10 text-white border border-white/25 hover:border-white/50 text-xs font-semibold rounded-lg tracking-wide transition-all duration-200 cursor-pointer"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Call Store</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

@@ -135,9 +135,6 @@ export default function HomePage() {
       <section className="bg-[#f8f9fa] border-b border-neutral-200/80 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold block mb-2">
-              Our Collections
-            </span>
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
               Our Core Verticals
             </h2>
@@ -153,7 +150,8 @@ export default function HomePage() {
                 src="/1.jpeg"
                 alt="Women's Wear Collection"
                 fill
-                sizes="(max-width: 640px) 100vw, 25vw"
+                quality={95}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
@@ -169,10 +167,11 @@ export default function HomePage() {
             {/* Card 2: Men's Wear */}
             <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/7.jpeg"
+                src="/3.jpeg"
                 alt="Men's Wear Collection"
                 fill
-                sizes="(max-width: 640px) 100vw, 25vw"
+                quality={95}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
@@ -191,7 +190,8 @@ export default function HomePage() {
                 src="/18.jpeg"
                 alt="Kids' Wear Collection"
                 fill
-                sizes="(max-width: 640px) 100vw, 25vw"
+                quality={95}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
@@ -210,7 +210,8 @@ export default function HomePage() {
                 src="/2.jpeg"
                 alt="Beauty Parlour & Salon"
                 fill
-                sizes="(max-width: 640px) 100vw, 25vw"
+                quality={95}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
@@ -230,10 +231,7 @@ export default function HomePage() {
       <section className="bg-white py-20 border-b border-neutral-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold block mb-2">
-                Curated Selection
-              </span>
+            <div> 
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
                 Featured In-Store Arrivals
               </h2>
@@ -255,7 +253,8 @@ export default function HomePage() {
                     src={item.image}
                     alt={item.name}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    quality={95}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -305,9 +304,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 space-y-6">
-              <span className="text-xs uppercase tracking-[0.25em] text-[#cbb193] font-semibold block">
-                The Jesika Standard
-              </span>
               <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight leading-snug text-white">
                 Why Families Trust Jesika
               </h2>
@@ -339,7 +335,8 @@ export default function HomePage() {
                   src="/5.jpeg"
                   alt="Jesika Fashion Store Collection"
                   fill
-                  sizes="(max-width: 1024px) 50vw, 30vw"
+                  quality={95}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -348,7 +345,8 @@ export default function HomePage() {
                   src="/4.jpeg"
                   alt="Jesika Beauty Parlour Treatment"
                   fill
-                  sizes="(max-width: 1024px) 50vw, 30vw"
+                  quality={95}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -361,9 +359,6 @@ export default function HomePage() {
       <section className="bg-white text-neutral-900 py-20 border-b border-neutral-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold block mb-2">
-              Simple Experience
-            </span>
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
               How It Works
             </h2>
@@ -395,9 +390,6 @@ export default function HomePage() {
       {/* 7. Client Reviews - Soft Light Background */}
       <section className="bg-[#f8f9fa] border-b border-neutral-200/80 py-20">
         <div className="text-center max-w-xl mx-auto mb-14">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#9d735d] font-semibold block mb-2">
-            Local Testimonials
-          </span>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
             Loved By Families
           </h2>
@@ -438,7 +430,8 @@ export default function HomePage() {
                 src={img.src}
                 alt="Instagram post"
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                quality={95}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-medium tracking-wider">

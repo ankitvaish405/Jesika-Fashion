@@ -37,3 +37,8 @@ body {
   background-color: #ebdcd2;
   color: #29201d;
 }
+
+/* Crisp image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
