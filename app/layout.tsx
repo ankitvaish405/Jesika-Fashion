@@ -15,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jesikafashion.com'),
   title: "Jesika | Luxury Fashion & Cosmetics",
   description: "Explore Jesika luxury cosmetic products, haute couture, runway gallery and beauty essentials.",
+  verification: {
+    google: "tiz9jDlCVXlGAfNYCQ0k5trWzdX5Jf_q2Yp0Fxruwak",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

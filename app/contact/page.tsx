@@ -49,14 +49,20 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen font-sans pb-16">
+    <div className="min-h-screen bg-white text-neutral-900 font-sans pb-16">
 
       {/* Top Header Section */}
-      <div className="border-b border-[#e8ded2]">
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-center text-2xl font-bold  tracking-widest text-[#29201d]">
-            Contact-Us
+      <div className="border-b border-neutral-200 bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-12 text-center">
+          <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
+            Get in Touch
+          </p>
+          <h1 className="text-3xl sm:text-4xl font-sans font-bold tracking-tight text-neutral-900">
+            Contact Us
           </h1>
+          <p className="mt-2 text-sm text-neutral-600 max-w-md mx-auto font-normal">
+            Have questions about our collections, alterations, or bridal parlour services? We’d love to help.
+          </p>
         </div>
       </div>
 
@@ -66,20 +72,20 @@ export default function ContactPage() {
 
           {/* Left Column - Contact Form */}
           <div>
-            <h2 className="text-[1.1rem] font-bold  tracking-wider mb-8 text-[#29201d]">
-              Send Your Question
+            <h2 className="text-xl font-sans font-semibold tracking-tight mb-6 text-neutral-900">
+              Send Your Message
             </h2>
 
             {submitted && (
-              <div className="mb-6 p-4 border border-[#9d735d]/40 bg-[#f5ebe3] text-[#8c5a47] text-sm flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#9d735d] shrink-0" />
+              <div className="mb-6 p-4 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-800 text-sm flex items-center gap-3">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
                 <span>Thank you for reaching out! Your message has been sent successfully.</span>
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-xs font-semibold  text-[#736359] mb-2">
+                <label className="block text-xs font-medium text-neutral-700 mb-2">
                   Your Name
                 </label>
                 <input
@@ -87,12 +93,13 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full border border-[#e8ded2] p-3 outline-none focus:border-[#9d735d] transition-colors bg-white text-sm"
+                  className="w-full rounded-xl border border-neutral-300 p-3.5 outline-none focus:border-neutral-900 focus:ring-1 focus:ring-neutral-900 transition-colors bg-white text-sm"
+                  placeholder="e.g. Priya Sharma"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold  text-[#736359] mb-2">
+                <label className="block text-xs font-medium text-neutral-700 mb-2">
                   Your Email
                 </label>
                 <input
@@ -100,28 +107,30 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full border border-[#e8ded2] p-3 outline-none focus:border-[#9d735d] transition-colors bg-white text-sm"
+                  className="w-full rounded-xl border border-neutral-300 p-3.5 outline-none focus:border-neutral-900 focus:ring-1 focus:ring-neutral-900 transition-colors bg-white text-sm"
+                  placeholder="e.g. priya@example.com"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold  text-[#736359] mb-2">
+                <label className="block text-xs font-medium text-neutral-700 mb-2">
                   Your Message
                 </label>
                 <textarea
-                  rows={6}
+                  rows={5}
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full border border-[#e8ded2] p-3 outline-none focus:border-[#9d735d] transition-colors resize-y bg-white text-sm"
+                  className="w-full rounded-xl border border-neutral-300 p-3.5 outline-none focus:border-neutral-900 focus:ring-1 focus:ring-neutral-900 transition-colors resize-y bg-white text-sm"
+                  placeholder="How can we assist you today?"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full border-[1.5px] border-[#29201d] bg-white text-[#29201d] font-bold text-sm  tracking-widest py-3.5 hover:bg-[#9d735d] hover:text-white hover:border-[#9d735d] transition-colors duration-300 cursor-pointer shadow-xs"
+                className="w-full rounded-xl bg-neutral-900 text-white font-medium text-sm tracking-wide py-3.5 hover:bg-neutral-800 transition-colors duration-200 cursor-pointer shadow-sm"
               >
-                Send
+                Send Message
               </button>
             </form>
           </div>
@@ -129,17 +138,17 @@ export default function ContactPage() {
           {/* Right Column - Contact Information */}
           <div>
             {/* Address */}
-            <div className="mb-8">
-              <h3 className="text-[1.1rem] font-bold  tracking-wider mb-4 text-[#29201d]">
-                Address
+            <div className="mb-6">
+              <h3 className="text-base font-sans font-semibold tracking-tight mb-2 text-neutral-900">
+                Store Address
               </h3>
-              <div className="flex items-start text-sm text-[#736359]">
-                <MapPin className="w-4 h-4 mr-3 text-[#9d735d] shrink-0 mt-0.5" />
+              <div className="flex items-start text-sm text-neutral-600">
+                <MapPin className="w-4 h-4 mr-3 text-neutral-900 shrink-0 mt-0.5" />
                 <a
                   href="https://maps.app.goo.gl/MVMphJJv31agtDvG6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="leading-relaxed hover:text-[#9d735d] transition-colors"
+                  className="leading-relaxed hover:text-black transition-colors"
                 >
                   Madan Mohan Malviya Rd Panch Koshi, Near Panch Koshi Chauraha, Paigambapur, Asapur, Rasulabad, Varanasi, Uttar Pradesh 221002
                 </a>
@@ -147,14 +156,14 @@ export default function ContactPage() {
             </div>
 
             {/* Phones */}
-            <div className="mb-8">
-              <h3 className="text-[1.1rem] font-bold  tracking-wider mb-4 text-[#29201d]">
-                Phones
+            <div className="mb-6">
+              <h3 className="text-base font-sans font-semibold tracking-tight mb-2 text-neutral-900">
+                Direct Phone
               </h3>
-              <div className="space-y-3 text-sm text-[#736359]">
+              <div className="space-y-3 text-sm text-neutral-600">
                 <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-3 text-[#9d735d] shrink-0" />
-                  <a href="tel:+918924099911" className="hover:text-[#9d735d] font-medium text-base text-[#29201d]">
+                  <Phone className="w-4 h-4 mr-3 text-neutral-900 shrink-0" />
+                  <a href="tel:+918924099911" className="hover:text-black font-semibold text-base text-neutral-900">
                     +91 89240 99911
                   </a>
                 </div>
@@ -162,78 +171,76 @@ export default function ContactPage() {
             </div>
 
             {/* Email */}
-            <div className="mb-8">
-              <h3 className="text-[1.1rem] font-bold  tracking-wider mb-4 text-[#29201d]">
+            <div className="mb-6">
+              <h3 className="text-base font-sans font-semibold tracking-tight mb-2 text-neutral-900">
                 Email
               </h3>
-              <div className="flex items-center text-sm text-[#736359]">
-                <Mail className="w-4 h-4 mr-3 text-[#9d735d] shrink-0" />
-                <a href="mailto:info@jesikafashion.com" className="hover:text-[#9d735d]">
+              <div className="flex items-center text-sm text-neutral-600">
+                <Mail className="w-4 h-4 mr-3 text-neutral-900 shrink-0" />
+                <a href="mailto:info@jesikafashion.com" className="hover:text-black font-medium">
                   info@jesikafashion.com
                 </a>
               </div>
             </div>
 
             {/* Working Hours */}
-            <div className="mb-8 p-3.5 sm:p-5 bg-[#fbf5ee] border border-[#e8ded2] overflow-hidden">
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-4 border-b border-[#e8ded2] pb-3">
+            <div className="mb-6 p-5 bg-[#f8f9fa] border border-neutral-200 rounded-2xl overflow-hidden">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4 border-b border-neutral-200 pb-3">
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2 text-[#9d735d] shrink-0" />
-                  <h3 className="text-[1.1rem] font-bold tracking-wider text-[#29201d]">
+                  <Clock className="w-4 h-4 mr-2 text-neutral-900 shrink-0" />
+                  <h3 className="text-sm font-sans font-semibold text-neutral-900">
                     Working Hours
                   </h3>
                 </div>
-                <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider text-[#9d735d] bg-[#f0e3d6] px-2 py-0.5 sm:px-2.5 sm:py-1">
+                <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                   Open All 7 Days
                 </span>
               </div>
 
-              <div className="space-y-1 text-sm sm:text-base">
-                <div className="flex items-center justify-between py-2 border-b border-[#ebdcd2] gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Wednesday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:30 pm</span>
+              <div className="space-y-1.5 text-xs sm:text-sm">
+                <div className="flex items-center justify-between py-1 border-b border-neutral-100 gap-2">
+                  <span className="font-medium text-neutral-700">Friday – Wednesday:</span>
+                  <span className="font-semibold text-neutral-900 text-right">10:00 am – 9:30 pm</span>
                 </div>
-                <div className="flex items-center justify-between py-2 border-b border-[#ebdcd2] gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Thursday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:00 pm</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-[#ebdcd2] gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Friday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:30 pm</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-[#ebdcd2] gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Saturday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:30 pm</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-[#ebdcd2] gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Sunday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:30 pm</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-[#ebdcd2] gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Monday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:30 pm</span>
-                </div>
-                <div className="flex items-center justify-between py-2 gap-2">
-                  <span className="font-semibold text-[#29201d] text-xs sm:text-base">Tuesday:</span>
-                  <span className="font-medium text-[#4a3b32] text-xs sm:text-base text-right">10:00 am – 9:30 pm</span>
+                <div className="flex items-center justify-between py-1 gap-2">
+                  <span className="font-medium text-neutral-700">Thursday:</span>
+                  <span className="font-semibold text-neutral-900 text-right">10:00 am – 9:00 pm</span>
                 </div>
               </div>
             </div>
 
             {/* Follow Us */}
             <div>
-              <h3 className="text-[1.1rem] font-bold tracking-wider mb-4 text-[#29201d]">
-                Follow Us
+              <h3 className="text-base font-sans font-semibold tracking-tight mb-3 text-neutral-900">
+                Connect on Social Media
               </h3>
-              <div className="flex items-center space-x-5 text-[#29201d]">
-                <a href="#" aria-label="Facebook" className="hover:text-[#9d735d] transition-colors">
-                  <FacebookIcon className="w-5 h-5 fill-current" />
+              <div className="flex items-center space-x-4 text-neutral-700">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100086498487410&rdid=iQxAzc7ZvgkZ4223&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DbLHTdPCo%2F#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="p-2.5 rounded-full border border-neutral-200 hover:bg-neutral-900 hover:text-white transition-colors"
+                >
+                  <FacebookIcon className="w-4 h-4 fill-current" />
                 </a>
-                <a href="#" aria-label="Instagram" className="hover:text-[#9d735d] transition-colors">
-                  <InstagramIcon className="w-5 h-5" />
+                <a
+                  href="https://www.instagram.com/jesika._.fashion?utm_source=qr&stkn=MWRzZmZ4enZ1cHFmOA%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="p-2.5 rounded-full border border-neutral-200 hover:bg-neutral-900 hover:text-white transition-colors"
+                >
+                  <InstagramIcon className="w-4 h-4" />
                 </a>
-                <a href="#" aria-label="YouTube" className="hover:text-[#9d735d] transition-colors">
-                  <YoutubeIcon className="w-5 h-5" />
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="p-2.5 rounded-full border border-neutral-200 hover:bg-neutral-900 hover:text-white transition-colors"
+                >
+                  <YoutubeIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -241,8 +248,8 @@ export default function ContactPage() {
         </div>
 
         {/* Google Map Embedded Section */}
-        <div className="relative w-full border border-[#e8ded2] mb-8 shadow-xs overflow-hidden">
-          <div className="w-full h-[350px] sm:h-[450px]">
+        <div className="relative w-full rounded-2xl border border-neutral-200 mb-8 shadow-xs overflow-hidden">
+          <div className="w-full h-[350px] sm:h-[420px]">
             <iframe
               src="https://maps.google.com/maps?q=25.3517155,83.0249369+(JESIKA+FASHION)&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
@@ -251,7 +258,7 @@ export default function ContactPage() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full grayscale-[10%]"
+              className="w-full h-full"
             ></iframe>
           </div>
           <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 max-w-[calc(100%-1.5rem)]">
@@ -259,7 +266,7 @@ export default function ContactPage() {
               href="https://maps.app.goo.gl/MVMphJJv31agtDvG6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#29201d] hover:bg-[#9d735d] text-white px-4 sm:px-5 py-2.5 sm:py-3 text-xs font-semibold tracking-wider shadow-lg transition-colors truncate"
+              className="inline-flex items-center gap-2 bg-neutral-900 hover:bg-black text-white px-4 sm:px-5 py-2.5 sm:py-3 text-xs font-medium rounded-xl shadow-lg transition-colors truncate"
             >
               <span>Open in Google Maps</span>
               <span>↗</span>

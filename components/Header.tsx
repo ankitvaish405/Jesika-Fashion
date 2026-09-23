@@ -23,17 +23,17 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-[#fbf8f4]/95 backdrop-blur-md border-b border-[#e8ded2] transition-colors">
+    <header className="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
           {/* Brand Name & Subtitle */}
           <div className="flex-shrink min-w-0 pr-2">
             <Link href="/" className="inline-block group max-w-full">
-              <span className="text-lg sm:text-2xl font-serif font-bold text-[#29201d] tracking-tight group-hover:text-[#9d735d] transition-colors block leading-tight truncate">
+              <span className="text-xl sm:text-2xl font-sans font-bold text-neutral-900 tracking-tight group-hover:text-amber-800 transition-colors block leading-tight truncate">
                 Jesika Fashion
               </span>
-              <span className="text-[9px] sm:text-[11px] tracking-wide text-[#9d735d] font-sans font-medium block truncate">
+              <span className="text-[10px] sm:text-xs tracking-normal text-neutral-500 font-sans font-medium block truncate">
                 All in one store & beauty parlour
               </span>
             </Link>
@@ -47,10 +47,10 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm transition-colors duration-200 tracking-wide ${
+                  className={`text-sm transition-colors duration-200 font-medium ${
                     isActive
-                      ? 'text-[#9d735d] font-semibold border-b-2 border-[#9d735d] pb-1'
-                      : 'text-[#6e5d54] hover:text-[#29201d] font-medium'
+                      ? 'text-neutral-900 font-semibold border-b-2 border-neutral-900 pb-1'
+                      : 'text-neutral-600 hover:text-neutral-900'
                   }`}
                 >
                   {link.name}
@@ -76,7 +76,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#e8ded2] bg-[#fbf8f4]">
+        <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="px-4 pt-3 pb-5 space-y-1.5">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
@@ -84,10 +84,10 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`block py-2.5 px-3 rounded text-sm transition-colors ${
+                  className={`block py-2.5 px-3 rounded-lg text-sm transition-colors ${
                     isActive
-                      ? 'bg-[#f3ede5] text-[#9d735d] font-semibold'
-                      : 'text-[#6e5d54] hover:bg-[#f7f1eb] hover:text-[#29201d]'
+                      ? 'bg-neutral-100 text-neutral-900 font-semibold'
+                      : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
                   }`}
                 >
                   {link.name}

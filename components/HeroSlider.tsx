@@ -117,26 +117,26 @@ export default function HeroSlider() {
 
             {/* Slide Content */}
             <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
-              <div className={`max-w-3xl mx-auto text-[#faf7f2] transition-all duration-500 ease-out ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                <p className="text-xs uppercase tracking-[0.3em] font-semibold text-[#ebdcd2] mb-3 drop-shadow">
+              <div className={`max-w-3xl mx-auto text-white transition-all duration-500 ease-out ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+                <p className="text-xs uppercase tracking-widest font-semibold text-neutral-200 mb-3 drop-shadow">
                   {slide.tagline}
                 </p>
-                <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-[#fbf8f4] mb-4 leading-tight drop-shadow-md">
+                <h1 className="text-3xl sm:text-5xl md:text-6xl font-sans font-bold tracking-tight text-white mb-4 leading-tight drop-shadow-md">
                   {slide.title}
                 </h1>
-                <p className="text-sm sm:text-base text-[#e5dbd3] max-w-xl mx-auto font-light mb-8 leading-relaxed drop-shadow">
+                <p className="text-sm sm:text-base text-neutral-200 max-w-xl mx-auto font-normal mb-8 leading-relaxed drop-shadow">
                   {slide.description}
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
                   <Link
                     href={slide.primaryBtnHref}
-                    className="w-full sm:w-auto px-7 py-3.5 bg-[#9d735d] hover:bg-[#855d4a] text-white text-xs font-semibold uppercase tracking-widest transition-colors shadow-lg"
+                    className="w-full sm:w-auto px-8 py-3.5 bg-white text-neutral-900 hover:bg-neutral-100 text-xs font-semibold rounded-xl tracking-wide transition-all shadow-lg"
                   >
                     {slide.primaryBtnText}
                   </Link>
                   <Link
                     href={slide.secondaryBtnHref}
-                    className="w-full sm:w-auto px-7 py-3.5 bg-transparent text-[#f5ebe3] border border-[#f5ebe3]/80 hover:bg-[#f5ebe3] hover:text-[#29201d] text-xs font-semibold uppercase tracking-widest transition-colors"
+                    className="w-full sm:w-auto px-8 py-3.5 bg-black/40 text-white border border-white/40 hover:bg-white/10 text-xs font-semibold rounded-xl tracking-wide transition-all backdrop-blur-xs"
                   >
                     {slide.secondaryBtnText}
                   </Link>
