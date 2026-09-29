@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Sparkles, Phone, MapPin, Clock, CheckCircle2, Star, ArrowRight, Heart } from 'lucide-react';
+import { Sparkles, Phone, MapPin, Clock, CheckCircle2, Star, ArrowRight, Heart, ZoomIn, X } from 'lucide-react';
 
 const PARLOUR_SERVICES = [
   {
@@ -14,7 +14,7 @@ const PARLOUR_SERVICES = [
       { name: 'Engagement & Sagan Makeover', desc: 'Elegant sophisticated party styling tailored to your lehenga/gown.' },
       { name: 'Party & Reception Makeup', desc: 'Glamorous festive makeup for bridesmaids, family & special celebrations.' },
     ],
-    image: '/2.jpeg',
+    image: '/parlor/7.jpeg',
   },
   {
     category: 'Hair Styling & Treatments',
@@ -24,7 +24,7 @@ const PARLOUR_SERVICES = [
       { name: 'Designer Haircut & Blow-dry', desc: 'Face-flattering cuts and personalized styling by experienced salon artists.' },
       { name: 'Global Hair Color & Balayage Highlights', desc: 'Ammonia-free rich tones and trendy caramel / burgundy streaks.' },
     ],
-    image: '/4.jpeg',
+    image: '/parlor/1.jpeg',
   },
   {
     category: 'Skin Glow & Facials',
@@ -34,7 +34,7 @@ const PARLOUR_SERVICES = [
       { name: 'Organic Herbal De-Tan & Clean-up', desc: 'Removes sun tan, pigmentation, and impurities with natural botanical extracts.' },
       { name: 'Anti-Aging Collagen Rejuvenation', desc: 'Firming massage therapy with peptide concentrates to soften fine lines.' },
     ],
-    image: '/12.jpeg',
+    image: '/parlor/3.jpeg',
   },
   {
     category: 'Hands, Feet & Grooming',
@@ -86,6 +86,7 @@ const PACKAGES = [
 export default function ParlourPage() {
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', service: 'Bridal Makeup', date: '' });
+  const [selectedMedia, setSelectedMedia] = useState<{ type: 'image' | 'video', src: string } | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -95,64 +96,98 @@ export default function ParlourPage() {
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans pb-24">
-      {/* 1. Header Banner - Crisp White */}
-      <div className="border-b border-neutral-200 bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-          <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
-            Jesika Fashion & Salon
-          </p>
-          <h1 className="text-3xl sm:text-5xl font-sans font-bold tracking-tight text-neutral-900">
-            Beauty Parlour & Salon
-          </h1>
-          <p className="mt-3 text-sm sm:text-base text-neutral-600 max-w-xl mx-auto font-normal">
-            Varanasi’s premier luxury parlour offering bridal makeover, hair transformations, skin brightening facials, and grooming services.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs font-medium">
-            <a
-              href="tel:+918924099911"
-              className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3.5 rounded-xl hover:bg-neutral-800 transition-colors shadow-sm"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Book Appointment: +91 89240 99911</span>
-            </a>
-            <a
-              href="https://maps.app.goo.gl/MVMphJJv31agtDvG6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white border border-neutral-300 text-neutral-800 px-6 py-3.5 rounded-xl hover:bg-neutral-50 transition-colors"
-            >
-              <MapPin className="w-4 h-4 text-neutral-900" />
-              <span>Near Panch Koshi Chauraha, Varanasi</span>
-            </a>
+      {/* 1. Header Banner - Elegant Split Layout */}
+      <div className="w-full min-h-[90vh] sm:min-h-screen bg-white relative flex items-center border-b border-neutral-200 py-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-16">
+          
+          {/* Left Content */}
+          <div className="flex-1 w-full max-w-2xl z-10 pt-10 md:pt-0">
+            <h1 className="text-5xl sm:text-6xl lg:text-[5.5rem] leading-[1.05] font-sans font-medium tracking-tighter text-[#2c3d2e] mb-6">
+              Get Your <br className="hidden sm:block" />
+              Natural <br className="hidden sm:block" />
+              Skin
+            </h1>
+            
+            <p className="text-[#5b6b5c] text-base lg:text-lg max-w-md font-medium leading-relaxed mb-10">
+              The natural color of the skin is your identity and originality, don't change it, we will help you in the best way to protect it.
+            </p>
+
+            {/* Badges/Tags */}
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 bg-[#f4f6f3] px-4 py-2.5 rounded-none text-xs lg:text-sm font-semibold text-[#2c3d2e] border border-[#e2e8e0]">
+                <span className="w-2 h-2 rounded-full bg-[#8b9b8c]"></span>
+                NC10 MAC FOUNDATION
+              </span>
+              <span className="inline-flex items-center gap-2 bg-[#f4f6f3] px-4 py-2.5 rounded-none text-xs lg:text-sm font-semibold text-[#2c3d2e] border border-[#e2e8e0]">
+                <span className="w-2 h-2 rounded-full bg-[#e3d5ca]"></span>
+                Herbal Care
+              </span>
+              <a href="tel:+918924099911" className="inline-flex items-center gap-2 bg-[#2c3d2e] text-white px-6 py-2.5 rounded-none text-xs lg:text-sm font-semibold hover:bg-[#1f2b20] transition-colors shadow-sm">
+                Book Now
+              </a>
+            </div>
           </div>
+
+          {/* Right Image */}
+          <div className="flex-1 w-full max-w-sm lg:max-w-md relative z-10 flex justify-center md:justify-end mt-8 md:mt-0">
+            <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-50 shadow-xl rounded-sm">
+              <Image 
+                src="/parlor/hero-model.jpg" 
+                alt="Natural Skin Model" 
+                fill 
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+          </div>
+          
         </div>
       </div>
 
-      {/* 2. Key Parlour Features - Soft Light Background */}
-      <section className="border-b border-neutral-200 bg-[#f8f9fa] py-10">
+      {/* 2. Key Parlour Features - Video + Badges */}
+      <section className="border-b border-neutral-200 bg-[#f8f9fa] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="p-4 bg-white rounded-xl border border-neutral-200 shadow-xs">
-              <Sparkles className="w-6 h-6 text-neutral-900 mx-auto mb-2" />
-              <h4 className="text-sm font-semibold text-neutral-900">Certified Artists</h4>
-              <p className="text-xs text-neutral-500 mt-1">Trained in HD & Airbrush techniques</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            
+            {/* Left: Video */}
+            <div className="w-full flex justify-center items-center">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                controls
+                className="w-auto h-auto max-w-full max-h-[70vh] lg:max-h-[80vh] rounded-xl shadow-lg border border-neutral-200 block"
+              >
+                <source src="/parlor/Beauty-Parlor.mp4" type="video/mp4" />
+              </video>
             </div>
-            <div className="p-4 bg-white rounded-xl border border-neutral-200 shadow-xs">
-              <Heart className="w-6 h-6 text-neutral-900 mx-auto mb-2" />
-              <h4 className="text-sm font-semibold text-neutral-900">Premium Products</h4>
-              <p className="text-xs text-neutral-500 mt-1">100% genuine & skin-friendly brands</p>
+
+            {/* Right: Badges Grid */}
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center lg:text-left">
+              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
+                <Sparkles className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
+                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Certified Artists</h4>
+                <p className="text-xs sm:text-sm text-neutral-500 mt-1">Trained in HD & Airbrush</p>
+              </div>
+              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
+                <Heart className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
+                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Premium Products</h4>
+                <p className="text-xs sm:text-sm text-neutral-500 mt-1">100% genuine brands</p>
+              </div>
+              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
+                <Clock className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
+                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Open 7 Days</h4>
+                <p className="text-xs sm:text-sm font-semibold text-neutral-900 mt-1">10:00 AM – 9:30 PM</p>
+                <p className="text-[10px] sm:text-xs text-neutral-500">(Thu: till 9:00 PM)</p>
+              </div>
+              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
+                <Star className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
+                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Hygiene First</h4>
+                <p className="text-xs sm:text-sm text-neutral-500 mt-1">Sanitized & single-use</p>
+              </div>
             </div>
-            <div className="p-4 bg-white rounded-xl border border-neutral-200 shadow-xs">
-              <Clock className="w-6 h-6 text-neutral-900 mx-auto mb-2" />
-              <h4 className="text-sm font-semibold text-neutral-900">Open 7 Days</h4>
-              <p className="text-xs font-semibold text-neutral-900 mt-1">10:00 AM – 9:30 PM</p>
-              <p className="text-[11px] text-neutral-500">(Thu: till 9:00 PM)</p>
-            </div>
-            <div className="p-4 bg-white rounded-xl border border-neutral-200 shadow-xs">
-              <Star className="w-6 h-6 text-neutral-900 mx-auto mb-2" />
-              <h4 className="text-sm font-semibold text-neutral-900">Hygiene First</h4>
-              <p className="text-xs text-neutral-500 mt-1">Sanitized kits & single-use disposables</p>
-            </div>
+
           </div>
         </div>
       </section>
@@ -173,7 +208,7 @@ export default function ParlourPage() {
               key={cat.category}
               className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-6 sm:p-10 bg-white border border-neutral-200 rounded-2xl shadow-xs"
             >
-              <div className="lg:col-span-4 relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-neutral-100 border border-neutral-200">
+              <div className={`lg:col-span-4 relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-neutral-100 border border-neutral-200 ${i % 2 !== 0 ? 'lg:order-last' : ''}`}>
                 <Image
                   src={cat.image}
                   alt={cat.category}
@@ -220,6 +255,111 @@ export default function ParlourPage() {
         </div>
       </section>
 
+      {/* Our Work Gallery - Beautiful Masonry/Grid */}
+      <section className="bg-white py-20 border-t border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-xl mx-auto mb-14">
+            <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">Our Portfolio</p>
+            <h2 className="text-3xl sm:text-4xl font-sans font-semibold tracking-tight text-neutral-900">
+              Glimpses of Our Work
+            </h2>
+            <p className="text-sm text-neutral-600 mt-2 font-normal">Explore our latest bridal makeovers, hair transformations, and premium beauty services.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 auto-rows-[200px] sm:auto-rows-[250px]">
+            {/* 1. video.mp4 */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'video', src: '/parlor/video.mp4' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-2 row-span-2 bg-neutral-900 cursor-pointer"
+            >
+              <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+                <source src="/parlor/video.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 2. 1.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/1.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/1.jpeg" alt="Gallery 1" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 3. 2.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/2.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/2.jpeg" alt="Gallery 2" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 4. 3.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/3.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/3.jpeg" alt="Gallery 3" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 5. 4.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/4.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/4.jpeg" alt="Gallery 4" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 6. 5.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/5.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/5.jpeg" alt="Gallery 5" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 7. 6.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/6.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/6.jpeg" alt="Gallery 6" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+            
+            {/* 8. 7.jpeg */}
+            <div 
+              onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/7.jpeg' })}
+              className="relative rounded-2xl overflow-hidden group shadow-sm col-span-2 row-span-1 bg-neutral-100 cursor-pointer"
+            >
+              <Image src="/parlor/7.jpeg" alt="Gallery 7" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <ZoomIn className="text-white w-8 h-8" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 4. Bridal & Special Packages - Luxury Rich Dark Background */}
       <section className="bg-[#181210] text-[#faf7f2] py-20 border-y border-neutral-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,7 +384,7 @@ export default function ParlourPage() {
                   <ul className="space-y-3 text-xs sm:text-sm text-neutral-300">
                     {pkg.features.map((f, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-white shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </li>
                     ))}
@@ -256,7 +396,7 @@ export default function ParlourPage() {
                     href="tel:+918924099911"
                     className="block w-full text-center py-3 bg-white hover:bg-neutral-100 text-neutral-900 rounded-xl text-xs font-semibold tracking-wide transition-colors shadow-sm"
                   >
-                    Inquire / Book Slot
+                    Book Slot
                   </a>
                 </div>
               </div>
@@ -361,6 +501,38 @@ export default function ParlourPage() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {selectedMedia && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 sm:p-8 backdrop-blur-sm">
+          <button 
+            onClick={() => setSelectedMedia(null)}
+            className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white/70 hover:text-white z-50 p-2 bg-black/50 rounded-full transition-colors"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          
+          <div className="relative w-full h-full max-w-6xl max-h-[90vh] flex items-center justify-center">
+            {selectedMedia.type === 'video' ? (
+              <video 
+                autoPlay 
+                loop 
+                controls 
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+              >
+                <source src={selectedMedia.src} type="video/mp4" />
+              </video>
+            ) : (
+              <Image 
+                src={selectedMedia.src} 
+                alt="Expanded View" 
+                fill 
+                className="object-contain" 
+              />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

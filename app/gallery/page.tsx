@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { X } from 'lucide-react';
+import Link from 'next/link';
+import { X, Phone } from 'lucide-react';
 
 interface GalleryItem {
   id: number;
@@ -95,7 +96,7 @@ export default function GalleryPage() {
             <div
               key={item.id}
               onClick={() => setSelectedImage(item)}
-              className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-neutral-100 border border-neutral-200 cursor-zoom-in shadow-xs transition-transform duration-300 hover:-translate-y-1"
+              className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-neutral-100 border border-neutral-200 cursor-zoom-in shadow-xs"
             >
               <Image
                 src={item.src}
@@ -103,13 +104,34 @@ export default function GalleryPage() {
                 fill
                 quality={95}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center" />
             </div>
           ))}
         </div>
       </div>
+
+      {/* 4. CTA Section */}
+      <section className="bg-white border-t border-neutral-200 py-20 sm:py-28 px-4 mt-16 sm:mt-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-semibold tracking-tight mb-6 text-black">
+            Ready for your transformation?
+          </h2>
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-medium">
+            Whether it's a bridal makeover, a fresh new haircut, or a relaxing spa session, our expert stylists are here to bring out your best look.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="tel:+918924099911" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#000] text-white px-8 py-4 rounded-none text-sm font-bold hover:bg-[#1f2b20] transition-colors shadow-sm">
+              <Phone className="w-4 h-4 " />
+              <span>Book Appointment</span>
+            </a>
+            <Link href="/parlour" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent text-[#000] border border-[#000]  px-8 py-4 rounded-none text-sm font-bold transition-colors">
+              <span>View Services</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
 
       {/* 5. Fullscreen Lightbox Modal */}
