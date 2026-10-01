@@ -27,7 +27,7 @@ const BESTSELLERS = [
     name: 'Royal Heritage Wedding Sherwani',
     category: "Men's Wear",
     price: '₹14,500',
-    image: '/7.jpeg',
+    image: '/14.jpeg',
     rating: 5.0,
   },
   {
@@ -35,7 +35,7 @@ const BESTSELLERS = [
     name: 'Little Princess Festive Lehenga Choli',
     category: "Kids' Wear",
     price: '₹1,850',
-    image: '/18.jpeg',
+    image: '/9.jpeg',
     rating: 4.9,
   },
   {
@@ -43,7 +43,7 @@ const BESTSELLERS = [
     name: 'HD Bridal Makeover Package',
     category: 'Beauty Parlour',
     price: 'Bridal Special',
-    image: '/2.jpeg',
+    image: '/parlor/2.jpeg',
     rating: 5.0,
   },
 ];
@@ -148,7 +148,7 @@ export default function HomePage() {
             {/* Card 1: Women's Wear */}
             <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/1.jpeg"
+                src="/3.jpeg"
                 alt="Women's Wear Collection"
                 fill
                 quality={95}
@@ -168,7 +168,7 @@ export default function HomePage() {
             {/* Card 2: Men's Wear */}
             <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/3.jpeg"
+                src="/2.jpeg"
                 alt="Men's Wear Collection"
                 fill
                 quality={95}
@@ -188,7 +188,7 @@ export default function HomePage() {
             {/* Card 3: Kids' Wear */}
             <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/18.jpeg"
+                src="/4.jpeg"
                 alt="Kids' Wear Collection"
                 fill
                 quality={95}
@@ -410,7 +410,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 grid grid-cols-2 gap-4 sm:gap-6">
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#241c19] border border-[#382b26] shadow-md">
                 <Image
-                  src="/5.jpeg"
+                  src="/8.jpeg"
                   alt="Jesika Fashion Store Collection"
                   fill
                   quality={95}
@@ -420,7 +420,7 @@ export default function HomePage() {
               </div>
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#241c19] border border-[#382b26] shadow-md translate-y-6">
                 <Image
-                  src="/4.jpeg"
+                  src="/parlor/7.jpeg"
                   alt="Jesika Beauty Parlour Treatment"
                   fill
                   quality={95}
