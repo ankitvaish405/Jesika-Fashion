@@ -19,7 +19,7 @@ const BESTSELLERS = [
     name: 'Embroidered Banarasi Silk Saree',
     category: "Women's Wear",
     price: '₹4,500',
-    image: '/1.jpeg',
+    image: '/7.jpeg',
     rating: 4.9,
   },
   {
@@ -138,6 +138,7 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
               Our Core Verticals
             </h2>
+            {/* sadskm */}
             <p className="text-sm sm:text-base text-neutral-600 mt-2 font-normal">
               All in one store for Men&apos;s wear, Women&apos;s wear, Kids&apos; wear, and Beauty Parlour services.
             </p>
@@ -152,7 +153,7 @@ export default function HomePage() {
                 fill
                 quality={95}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
@@ -172,7 +173,7 @@ export default function HomePage() {
                 fill
                 quality={95}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
@@ -192,7 +193,7 @@ export default function HomePage() {
                 fill
                 quality={95}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
@@ -207,12 +208,12 @@ export default function HomePage() {
             {/* Card 4: Beauty Parlour */}
             <Link href="/parlour" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/2.jpeg"
+                src="/parlor/3.jpeg"
                 alt="Beauty Parlour & Salon"
                 fill
                 quality={95}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
@@ -229,8 +230,6 @@ export default function HomePage() {
 
       {/* Heritage & 2003 Legacy Spotlight Section */}
       <section className="bg-gradient-to-br from-[#241b18] via-[#1d1613] to-[#120d0b] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-neutral-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-amber-700/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -334,7 +333,7 @@ export default function HomePage() {
                     fill
                     quality={95}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-4 flex-1 flex flex-col justify-between">
@@ -346,12 +345,12 @@ export default function HomePage() {
                     <p className="text-[10px] uppercase tracking-wider font-semibold text-[#9d735d]">
                       {item.category}
                     </p>
-                    <h3 className="text-sm font-semibold text-neutral-900 mt-1 line-clamp-1">
+                    {/* <h3 className="text-sm font-semibold text-neutral-900 mt-1 line-clamp-1">
                       {item.name}
-                    </h3>
+                    </h3> */}
                   </div>
                   <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between">
-                    <span className="text-sm font-bold text-neutral-900">{item.price}</span>
+                    {/* <span className="text-sm font-bold text-neutral-900">{item.price}</span> */}
                     <div className="flex items-center gap-2.5">
                       <a
                         href={`https://wa.me/918924099911?text=${encodeURIComponent(`Hi Jesika Fashion, I would like to inquire about ${item.name} (${item.category}) priced at ${item.price}`)}`}
