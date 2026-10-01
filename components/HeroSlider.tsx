@@ -20,36 +20,47 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    image: '/3.jpeg',
-    tagline: 'Est. 2003 • 23+ Years of Family Trust in Varanasi',
-    title: "Women's, Men's & Kids' Wear",
-    description: 'Varanasi’s premier all-in-one family store since 2003. Bridal lehengas, authentic Banarasi silk sarees, royal sherwanis, and festive kids wear.',
-    primaryBtnText: 'Explore Gallery',
+    image: '/2.jpeg',
+    tagline: "Men's Collection • Est. 2003 in Varanasi",
+    title: "Men's Royal, Festive & Everyday Wear",
+    description: "From regal wedding sherwanis and festive kurta-pyjama sets to premium casual jeans and formal trousers, crafted for effortless distinction.",
+    primaryBtnText: "Explore Men's Wear",
     primaryBtnHref: '/gallery',
-    secondaryBtnText: 'Our 2003 Story',
-    secondaryBtnHref: '/about',
+    secondaryBtnText: 'Contact Store',
+    secondaryBtnHref: '/contact',
   },
   {
     id: 2,
-    image: '/parlor/1.jpeg',
-    tagline: 'Jesika Beauty Parlour • Trusted Salon Care',
-    title: 'Bridal Makeover & Complete Salon Suite',
-    description: 'Two decades of bridal and beauty transformation expertise. Specialized HD makeup, hair spa therapies, radiance facials, and pre-bridal packages.',
-    primaryBtnText: 'Parlour Services',
-    primaryBtnHref: '/parlour',
-    secondaryBtnText: 'Book Appointment',
-    secondaryBtnHref: '/parlour',
+    image: '/3.jpeg',
+    tagline: "Women's Collection • 23+ Years of Family Trust",
+    title: "Authentic Banarasi Silks & Designer Suits",
+    description: "Varanasi’s finest handloom Banarasi sarees, graceful georgette Anarkalis, party gowns, and exquisite festive ensembles for every generation.",
+    primaryBtnText: "Explore Women's Wear",
+    primaryBtnHref: '/gallery',
+    secondaryBtnText: 'Our Heritage',
+    secondaryBtnHref: '/about',
   },
   {
     id: 3,
-    image: '/15.jpeg',
-    tagline: 'Heritage Weaves & Kids’ Celebrations',
-    title: 'Banarasi Silk Sarees & Party Outfits',
-    description: 'Dressing generations of Varanasi families since 2003—from regal heirloom silks to charming party gowns and ethnic sets for children.',
-    primaryBtnText: 'Explore Collections',
+    image: '/12.jpeg',
+    tagline: "Kids' Collection • For Boys & Girls of All Ages",
+    title: "Vibrant Festive Outfits & Party Wear",
+    description: "Celebrate childhood with delightful traditional kurta-dhoti sets, party blazers, princess frocks, and designer lehenga cholis for your little stars.",
+    primaryBtnText: "Explore Kids' Wear",
     primaryBtnHref: '/gallery',
-    secondaryBtnText: 'Our Legacy',
-    secondaryBtnHref: '/about',
+    secondaryBtnText: 'Inquire on WhatsApp',
+    secondaryBtnHref: 'https://wa.me/918924099911?text=Hi%20Jesika%20Fashion%2C%20I%20am%20interested%20in%20Kids%20Wear',
+  },
+  {
+    id: 4,
+    image: '/11.jpeg',
+    tagline: "Bridal Destination • Couture & Makeover Studio",
+    title: "Regal Bridal Lehengas & Complete Makeover",
+    description: "Turn your dream wedding look into reality with heirloom zari lehengas, bridal dupattas, and our full in-house HD bridal parlour & spa suite.",
+    primaryBtnText: "Explore Bridal Collection",
+    primaryBtnHref: '/gallery',
+    secondaryBtnText: 'Bridal Parlour Suite',
+    secondaryBtnHref: '/parlour',
   },
 ];
 
@@ -124,12 +135,23 @@ export default function HeroSlider() {
                   >
                     {slide.primaryBtnText}
                   </Link>
-                  <Link
-                    href={slide.secondaryBtnHref}
-                    className="w-full sm:w-auto px-8 py-3.5 bg-black/40 text-white border border-white/40 hover:bg-white/10 text-xs font-semibold rounded-xl tracking-wide transition-all backdrop-blur-xs"
-                  >
-                    {slide.secondaryBtnText}
-                  </Link>
+                  {slide.secondaryBtnHref.startsWith('http') ? (
+                    <a
+                      href={slide.secondaryBtnHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-8 py-3.5 bg-black/40 text-white border border-white/40 hover:bg-white/10 text-xs font-semibold rounded-xl tracking-wide transition-all backdrop-blur-xs"
+                    >
+                      {slide.secondaryBtnText}
+                    </a>
+                  ) : (
+                    <Link
+                      href={slide.secondaryBtnHref}
+                      className="w-full sm:w-auto px-8 py-3.5 bg-black/40 text-white border border-white/40 hover:bg-white/10 text-xs font-semibold rounded-xl tracking-wide transition-all backdrop-blur-xs"
+                    >
+                      {slide.secondaryBtnText}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
