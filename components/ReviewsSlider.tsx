@@ -31,7 +31,7 @@ const REVIEWS: Review[] = [
     author: 'Dr. Ritu Srivastava',
     rating: 5,
     timeAgo: '1 month ago',
-    text: 'Whenever we have any family function or festival, Jesika is our first choice. Everything from kids’ party wear to designer lehengas under one roof. Plus having the beauty parlour in the same building is so convenient.',
+    text: 'Our family has been shopping at Jesika Fashion since their shop opened in 2003. From our kids’ early festive wear to wedding lehengas and bridal parlour makeovers, they have been an inseparable part of all our family celebrations in Varanasi.',
   },
   {
     id: 4,

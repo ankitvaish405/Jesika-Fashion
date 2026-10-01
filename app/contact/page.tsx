@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, Clock, CheckCircle2, Award } from 'lucide-react';
 
 function FacebookIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
@@ -134,6 +135,7 @@ export default function ContactPage() {
 
           {/* Right Column - Contact Information */}
           <div>
+
             {/* Address */}
             <div className="mb-6">
               <h3 className="text-base font-sans font-semibold tracking-tight mb-2 text-neutral-900">

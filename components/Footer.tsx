@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export default function Footer() {
@@ -12,13 +13,27 @@ export default function Footer() {
           
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-sans font-bold tracking-tight text-[#faf7f2]">
-                Jesika Fashion
-              </span>
+            <Link href="/" className="inline-flex items-center gap-3.5 group">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#cbb193]/50 shadow-md shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/logo.png"
+                  alt="Jesika Fashion Logo"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <span className="text-2xl font-sans font-bold tracking-tight text-[#faf7f2] block leading-tight">
+                  Jesika Fashion
+                </span>
+                <span className="text-[11px] font-semibold text-[#cbb193] uppercase tracking-wider block mt-0.5">
+                  Est. 2003 • 23+ Years of Family Trust
+                </span>
+              </div>
             </Link>
             <p className="text-sm text-[#beb1a7] font-light leading-relaxed max-w-sm">
-              All in one clothing store in Varanasi offering Women’s wear, Men’s wear, Kids’ wear, and a full-service professional Beauty Parlour.
+              Established in 2003, Jesika Fashion has been Varanasi’s cherished all-in-one store offering Women’s wear, Men’s wear, Kids’ wear, in-house tailoring, and a full-service professional Beauty Parlour.
             </p>
             <div className="pt-2 text-xs text-[#a8998f] space-y-2.5">
               <div className="flex items-start gap-2">

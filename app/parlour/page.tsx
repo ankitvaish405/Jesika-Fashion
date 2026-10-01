@@ -114,6 +114,10 @@ export default function ParlourPage() {
 
             {/* Badges/Tags */}
             <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 bg-[#f4f6f3] px-4 py-2.5 rounded-none text-xs lg:text-sm font-bold text-amber-900 border border-amber-300/80 bg-amber-50">
+                <span className="w-2 h-2 rounded-full bg-amber-600"></span>
+                EST. 2003 • VARANASI
+              </span>
               <span className="inline-flex items-center gap-2 bg-[#f4f6f3] px-4 py-2.5 rounded-none text-xs lg:text-sm font-semibold text-[#2c3d2e] border border-[#e2e8e0]">
                 <span className="w-2 h-2 rounded-full bg-[#8b9b8c]"></span>
                 NC10 MAC FOUNDATION

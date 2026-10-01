@@ -11,6 +11,12 @@ interface FAQItem {
 
 const FAQS: FAQItem[] = [
   {
+    question: 'Since when has Jesika Fashion been serving families in Varanasi?',
+    answer:
+      'Jesika Fashion opened its shop in 2003 near Panch Koshi Chauraha, Asapur, Varanasi. With over 23 years of dedication and trust, we have grown from a cherished local shop into Varanasi’s foremost all-in-one landmark for family clothing, in-house master alterations, and a full-service professional beauty parlour.',
+    category: 'Legacy & Heritage',
+  },
+  {
     question: 'Do you offer home delivery in Varanasi or shipping across India?',
     answer:
       'Yes, absolutely! For local customers in Varanasi, we provide same-day or next-day home delivery for all clothing collections (Banarasi sarees, suits, sherwanis, kids\' wear) and cosmetics. For customers outside Varanasi, we deliver safely across Uttar Pradesh and all over India via express courier partners. You can easily order via WhatsApp or phone call.',

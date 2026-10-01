@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
@@ -27,15 +28,26 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
-          {/* Brand Name & Subtitle */}
+          {/* Brand Name, Logo & Subtitle */}
           <div className="flex-shrink min-w-0 pr-2">
-            <Link href="/" className="inline-block group max-w-full">
-              <span className="text-xl sm:text-2xl font-sans font-bold text-neutral-900 tracking-tight group-hover:text-amber-800 transition-colors block leading-tight truncate">
-                Jesika Fashion
-              </span>
-              <span className="text-[10px] sm:text-xs tracking-normal text-neutral-500 font-sans font-medium block truncate">
-                All in one store & beauty parlour
-              </span>
+            <Link href="/" className="flex items-center gap-3 group max-w-full">
+              <div className="relative w-11 h-11 sm:w-13 sm:h-13 shrink-0 rounded-full overflow-hidden">
+                <Image
+                  src="/logo.png"
+                  alt="Jesika Fashion Logo"
+                  fill
+                  sizes="52px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg sm:text-xl font-sans font-bold text-neutral-900 tracking-tight  block leading-tight truncate">
+                    Jesika Fashion
+                  </span>
+                </div>
+              </div>
             </Link>
           </div>
 

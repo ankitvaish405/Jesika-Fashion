@@ -60,14 +60,14 @@ export default function GalleryPage() {
       {/* 1. Header Banner */}
       <div className="border-b border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-          <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
-            The Complete Visual Lookbook
+          <p className="text-xs uppercase tracking-widest text-amber-800 font-bold mb-2">
+            Est. 2003 • The Complete Family Lookbook
           </p>
           <h1 className="text-3xl sm:text-5xl font-sans font-bold tracking-tight text-neutral-900">
             Jesika Visual Archive
           </h1>
           <p className="mt-3 text-sm sm:text-base text-neutral-600 max-w-lg mx-auto font-normal">
-            An expansive gallery showcasing Varanasi bridal couture, festive collections, and parlour transformations.
+            Celebrating 23+ years of Varanasi bridal couture, authentic Banarasi silks, men’s festive wear, kids’ outfits, and parlour transformations.
           </p>
         </div>
       </div>

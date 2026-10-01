@@ -1,16 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Shirt, Crown, Baby, Scissors, Star, CheckCircle, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Shirt, Crown, Baby, Scissors, Star, CheckCircle, Clock, Award } from 'lucide-react';
 import HeroSlider from '@/components/HeroSlider';
 import ReviewsSlider from '@/components/ReviewsSlider';
 import FAQSection from '@/components/FAQSection';
 
 const HIGHLIGHTS = [
-  { icon: Crown, title: "Women's Collection", desc: 'Sarees, Lehengas, Suits & Western wear' },
-  { icon: Shirt, title: "Men's Fashion", desc: 'Kurta Pajamas, Sherwanis & Formal wear' },
-  { icon: Baby, title: "Kids' Wear", desc: 'Festive & Party wear for boys and girls' },
-  { icon: Sparkles, title: 'Beauty Parlour', desc: 'Bridal makeover, hair styling & skincare' },
+  { icon: Award, title: 'Est. 2003 in Varanasi', desc: '23+ years of family trust & legacy' },
+  { icon: Crown, title: "Women's & Men's Wear", desc: 'Bridal Lehengas, Sarees & Sherwanis' },
+  { icon: Baby, title: "Kids' Festive Wear", desc: 'Ethnic & party wear for boys and girls' },
+  { icon: Sparkles, title: 'Beauty Parlour Suite', desc: 'HD bridal makeovers, hair & skin care' },
 ];
 
 const BESTSELLERS = [
@@ -50,9 +50,14 @@ const BESTSELLERS = [
 
 const WHY_CHOOSE_US = [
   {
+    icon: Award,
+    title: 'Serving Varanasi Since 2003',
+    desc: 'Over 23 years of cherished heritage, delivering authentic fabrics, trustworthy craftsmanship, and honest pricing.',
+  },
+  {
     icon: Shirt,
     title: 'Complete Family Fashion',
-    desc: 'Everything under one roof: vast selections of Men’s, Women’s, and Kids’ clothing for all occasions.',
+    desc: 'Everything under one roof: vast selections of Men’s, Women’s, and Kids’ clothing for all celebrations.',
   },
   {
     icon: Sparkles,
@@ -62,12 +67,7 @@ const WHY_CHOOSE_US = [
   {
     icon: Scissors,
     title: 'Custom Alterations & Tailoring',
-    desc: 'Our in-house master tailors provide quick and custom fitting alterations on all purchases.',
-  },
-  {
-    icon: Clock,
-    title: 'Open All 7 Days in Varanasi',
-    desc: 'Convenient timings 10:00 am – 9:30 pm (Thu till 9:00 pm) near Panch Koshi Chauraha, Asapur.',
+    desc: 'Our in-house master tailors provide quick and custom fitting alterations within 30–60 minutes.',
   },
 ];
 
@@ -223,6 +223,85 @@ export default function HomePage() {
                 </span>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Heritage & 2003 Legacy Spotlight Section */}
+      <section className="bg-gradient-to-br from-[#241b18] via-[#1d1613] to-[#120d0b] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-neutral-800 relative overflow-hidden">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-amber-700/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Logo Medallion & Badge */}
+            <div className="lg:col-span-4 flex flex-col items-center text-center">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-amber-500/40 shadow-2xl p-1 bg-black/40 group-hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/logo.png"
+                  alt="Jesika Fashion Medallion Logo"
+                  fill
+                  sizes="(max-width: 768px) 160px, 192px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="mt-4">
+                <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/20 text-[#e9be87] border border-amber-500/30">
+                  Established 2003 • Varanasi
+                </span>
+              </div>
+            </div>
+
+            {/* Narrative Content */}
+            <div className="lg:col-span-8 space-y-5">
+              <div className="space-y-1.5">
+                <p className="text-xs uppercase tracking-widest text-[#cbb193] font-semibold">
+                  A Legacy of 23+ Years in Varanasi
+                </p>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold tracking-tight text-[#faf7f2] leading-tight">
+                  Serving Generations of Varanasi Families Since 2003
+                </h2>
+              </div>
+
+              <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+                Back in <strong>2003</strong>, Jesika Fashion opened its very first shop in Varanasi near Panch Koshi Chauraha with a heartfelt vision: to provide families with genuine quality fabrics, magnificent traditional craftsmanship, and true value for every special celebration.
+              </p>
+
+              <p className="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+                Over the past <strong>23+ years</strong>, what began as a humble local store has grown into Varanasi’s most trusted all-in-one destination. Today, generations of families walk through our doors to find heirloom Banarasi sarees, royal bridal lehengas, handsome men’s sherwanis, delightful children’s party wear, and a dedicated professional Beauty Parlour suite—all under one welcoming roof.
+              </p>
+
+              <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-neutral-800">
+                <div>
+                  <p className="text-2xl sm:text-3xl font-bold font-sans text-[#e9be87]">2003</p>
+                  <p className="text-xs text-neutral-400 mt-0.5">Year Founded</p>
+                </div>
+                <div>
+                  <p className="text-2xl sm:text-3xl font-bold font-sans text-[#e9be87]">23+ Years</p>
+                  <p className="text-xs text-neutral-400 mt-0.5">Continuous Trust</p>
+                </div>
+                <div>
+                  <p className="text-2xl sm:text-3xl font-bold font-sans text-[#e9be87]">28,000+</p>
+                  <p className="text-xs text-neutral-400 mt-0.5">Families Styled</p>
+                </div>
+                <div>
+                  <p className="text-2xl sm:text-3xl font-bold font-sans text-[#e9be87]">All-In-One</p>
+                  <p className="text-xs text-neutral-400 mt-0.5">Store & Parlour</p>
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#e9be87] hover:text-white transition-colors"
+                >
+                  <span>Explore Our 2003 Heritage & Story</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
