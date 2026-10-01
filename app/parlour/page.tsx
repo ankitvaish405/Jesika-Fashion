@@ -36,16 +36,6 @@ const PARLOUR_SERVICES = [
     ],
     image: '/parlor/3.jpeg',
   },
-  {
-    category: 'Hands, Feet & Grooming',
-    services: [
-      { name: 'Deluxe Manicure & Pedicure Spa', desc: 'Relaxing foot soak, dead-skin buffing, massage, and nail care.' },
-      { name: 'Rica Liposoluble Waxing (Full Body / Arms / Legs)', desc: 'Painless, gentle on sensitive skin, leaving arms and legs velvet-smooth.' },
-      { name: 'Nail Extension & Gel Artistry', desc: 'Trendy French tips, chrome shimmer, and bridal nail art designs.' },
-      { name: 'Precision Threading & Brow Shaping', desc: 'Clean, defined arches and gentle facial threading.' },
-    ],
-    image: '/14.jpeg',
-  },
 ];
 
 const PACKAGES = [

@@ -20,7 +20,7 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    image: '/1.jpeg',
+    image: '/3.jpeg',
     tagline: 'Est. 2003 • 23+ Years of Family Trust in Varanasi',
     title: "Women's, Men's & Kids' Wear",
     description: 'Varanasi’s premier all-in-one family store since 2003. Bridal lehengas, authentic Banarasi silk sarees, royal sherwanis, and festive kids wear.',
@@ -31,7 +31,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: 2,
-    image: '/2.jpeg',
+    image: '/parlor/1.jpeg',
     tagline: 'Jesika Beauty Parlour • Trusted Salon Care',
     title: 'Bridal Makeover & Complete Salon Suite',
     description: 'Two decades of bridal and beauty transformation expertise. Specialized HD makeup, hair spa therapies, radiance facials, and pre-bridal packages.',
@@ -42,18 +42,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: 3,
-    image: '/7.jpeg',
-    tagline: "Men's Wedding & Festive Ensembles",
-    title: 'Royal Kurta Sets & Tailored Sherwanis',
-    description: 'Impeccably tailored ethnic wear and wedding sherwanis for grooms and family members with in-house master alteration guarantee.',
-    primaryBtnText: "Explore Men's Wear",
-    primaryBtnHref: '/gallery',
-    secondaryBtnText: 'Visit Store',
-    secondaryBtnHref: '/contact',
-  },
-  {
-    id: 4,
-    image: '/9.jpeg',
+    image: '/15.jpeg',
     tagline: 'Heritage Weaves & Kids’ Celebrations',
     title: 'Banarasi Silk Sarees & Party Outfits',
     description: 'Dressing generations of Varanasi families since 2003—from regal heirloom silks to charming party gowns and ethnic sets for children.',

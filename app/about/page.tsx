@@ -39,22 +39,22 @@ const MILESTONES = [
 const CORE_DEPARTMENTS = [
   {
     title: "Women's Heritage & Bridal",
-    image: '/1.jpeg',
+    image: '/10.jpeg',
     desc: 'Pure Banarasi silk sarees, royal wedding lehengas, festive anarkalis, and designer suits crafted with timeless Indian artistry.',
   },
   {
-    title: "Men's Royal Festive Wear",
-    image: '/7.jpeg',
+    title: "Men's Royal Wear",
+    image: '/2.jpeg',
     desc: 'Handcrafted wedding sherwanis, embroidered kurtas, Indo-western sets, and formal ensembles with precision master tailoring.',
   },
   {
     title: "Kids' Festive & Party Wear",
-    image: '/18.jpeg',
+    image: '/4.jpeg',
     desc: 'Vibrant and comfortable party gowns, lehenga-cholis, and traditional kurta-dhoti sets for boys and girls of all ages.',
   },
   {
     title: "Jesika Beauty Parlour & Salon",
-    image: '/2.jpeg',
+    image: '/parlor/4.jpeg',
     desc: 'Certified bridal makeup artists, pre-bridal radiance packages, rejuvenating hair spa therapies, and organic facials.',
   },
 ];
