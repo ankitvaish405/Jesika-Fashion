@@ -20,17 +20,6 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    image: '/2.jpeg',
-    tagline: "Men's Collection • Est. 2003 in Varanasi",
-    title: "Men's Royal, Festive & Everyday Wear",
-    description: "From regal wedding sherwanis and festive kurta-pyjama sets to premium casual jeans and formal trousers, crafted for effortless distinction.",
-    primaryBtnText: "Explore Men's Wear",
-    primaryBtnHref: '/gallery',
-    secondaryBtnText: 'Contact Store',
-    secondaryBtnHref: '/contact',
-  },
-  {
-    id: 2,
     image: '/3.jpeg',
     tagline: "Women's Collection • 23+ Years of Family Trust",
     title: "Authentic Banarasi Silks & Designer Suits",
@@ -41,18 +30,7 @@ const SLIDES: Slide[] = [
     secondaryBtnHref: '/about',
   },
   {
-    id: 3,
-    image: '/12.jpeg',
-    tagline: "Kids' Collection • For Boys & Girls of All Ages",
-    title: "Vibrant Festive Outfits & Party Wear",
-    description: "Celebrate childhood with delightful traditional kurta-dhoti sets, party blazers, princess frocks, and designer lehenga cholis for your little stars.",
-    primaryBtnText: "Explore Kids' Wear",
-    primaryBtnHref: '/gallery',
-    secondaryBtnText: 'Inquire on WhatsApp',
-    secondaryBtnHref: 'https://wa.me/918924099911?text=Hi%20Jesika%20Fashion%2C%20I%20am%20interested%20in%20Kids%20Wear',
-  },
-  {
-    id: 4,
+    id: 2,
     image: '/11.jpeg',
     tagline: "Bridal Destination • Couture & Makeover Studio",
     title: "Regal Bridal Lehengas & Complete Makeover",
@@ -61,6 +39,28 @@ const SLIDES: Slide[] = [
     primaryBtnHref: '/gallery',
     secondaryBtnText: 'Bridal Parlour Suite',
     secondaryBtnHref: '/parlour',
+  },
+  {
+    id: 3,
+    image: '/2.jpeg',
+    tagline: "Men's Collection • Est. 2003 in Varanasi",
+    title: "Men's Royal, Festive & Everyday Wear",
+    description: "From regal wedding sherwanis and festive kurta-pyjama sets to premium casual jeans and formal trousers, crafted for effortless distinction.",
+    primaryBtnText: "Explore Men's Wear",
+    primaryBtnHref: '/gallery',
+    secondaryBtnText: 'Contact Store',
+    secondaryBtnHref: '/contact',
+  },
+  {
+    id: 4,
+    image: '/12.jpeg',
+    tagline: "Kids' Collection • For Boys & Girls of All Ages",
+    title: "Vibrant Festive Outfits & Party Wear",
+    description: "Celebrate childhood with delightful traditional kurta-dhoti sets, party blazers, princess frocks, and designer lehenga cholis for your little stars.",
+    primaryBtnText: "Explore Kids' Wear",
+    primaryBtnHref: '/gallery',
+    secondaryBtnText: 'Inquire on WhatsApp',
+    secondaryBtnHref: 'https://wa.me/919839200169?text=Hi%20Jesika%20Fashion%2C%20I%20am%20interested%20in%20Kids%20Wear',
   },
 ];
 
@@ -113,7 +113,7 @@ export default function HeroSlider() {
                 className="object-cover object-center"
               />
               {/* Subtle Clean Gradient Scrim for crystal clear photos with text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/15" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
             </div>
 
             {/* Slide Content */}

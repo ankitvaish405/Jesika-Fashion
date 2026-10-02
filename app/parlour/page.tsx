@@ -116,34 +116,14 @@ export default function ParlourPage() {
                 <span className="w-2 h-2 rounded-full bg-[#e3d5ca]"></span>
                 Herbal Care
               </span>
-              <a href="tel:+918924099911" className="inline-flex items-center gap-2 bg-[#2c3d2e] text-white px-6 py-2.5 rounded-none text-xs lg:text-sm font-semibold hover:bg-[#1f2b20] transition-colors shadow-sm">
+              <a href="tel:+919839200169" className="inline-flex items-center gap-2 bg-[#2c3d2e] text-white px-6 py-2.5 rounded-none text-xs lg:text-sm font-semibold hover:bg-[#1f2b20] transition-colors shadow-sm">
                 Book Now
               </a>
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right: Video */}
           <div className="flex-1 w-full max-w-sm lg:max-w-md relative z-10 flex justify-center md:justify-end mt-8 md:mt-0">
-            <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-50 shadow-xl rounded-sm">
-              <Image 
-                src="/parlor/hero-model.jpg" 
-                alt="Natural Skin Model" 
-                fill 
-                className="object-cover object-top"
-                priority
-              />
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-      {/* 2. Key Parlour Features - Video + Badges */}
-      <section className="border-b border-neutral-200 bg-[#f8f9fa] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            
-            {/* Left: Video */}
             <div className="w-full flex justify-center items-center">
               <video 
                 autoPlay 
@@ -151,37 +131,75 @@ export default function ParlourPage() {
                 muted 
                 playsInline 
                 controls
-                className="w-auto h-auto max-w-full max-h-[70vh] lg:max-h-[80vh] rounded-xl shadow-lg border border-neutral-200 block"
+                className="w-auto h-auto max-w-full max-h-[70vh] lg:max-h-[80vh] rounded-2xl shadow-xl border border-neutral-200 block"
               >
                 <source src="/parlor/Beauty-Parlor.mp4" type="video/mp4" />
               </video>
             </div>
+          </div>
+          
+        </div>
+      </div>
 
-            {/* Right: Badges Grid */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 text-center lg:text-left">
-              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
-                <Sparkles className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
-                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Certified Artists</h4>
-                <p className="text-xs sm:text-sm text-neutral-500 mt-1">Trained in HD & Airbrush</p>
+      {/* 2. Brand Value Pillars / Trust Badges - Pure White (Directly below Hero) */}
+      <section className="border-b border-neutral-200 bg-white py-8 sm:py-9">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 flex items-center justify-center bg-neutral-50 border border-neutral-200 shrink-0 shadow-2xs">
+                <Sparkles className="w-6 h-6 text-neutral-800" strokeWidth={1.5} />
               </div>
-              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
-                <Heart className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
-                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Premium Products</h4>
-                <p className="text-xs sm:text-sm text-neutral-500 mt-1">100% genuine brands</p>
-              </div>
-              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
-                <Clock className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
-                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Open 7 Days</h4>
-                <p className="text-xs sm:text-sm font-semibold text-neutral-900 mt-1">10:00 AM – 9:30 PM</p>
-                <p className="text-[10px] sm:text-xs text-neutral-500">(Thu: till 9:00 PM)</p>
-              </div>
-              <div className="p-4 sm:p-6 bg-white rounded-xl border border-neutral-200 shadow-xs flex flex-col items-center lg:items-start">
-                <Star className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-900 mb-2 sm:mb-3" />
-                <h4 className="text-sm sm:text-base font-semibold text-neutral-900">Hygiene First</h4>
-                <p className="text-xs sm:text-sm text-neutral-500 mt-1">Sanitized & single-use</p>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-semibold text-neutral-900 whitespace-nowrap tracking-normal">
+                  Certified Artists
+                </h4>
+                <p className="text-xs text-neutral-500 mt-0.5 leading-snug font-normal">
+                  Trained in HD & Airbrush
+                </p>
               </div>
             </div>
 
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 flex items-center justify-center bg-neutral-50 border border-neutral-200 shrink-0 shadow-2xs">
+                <Heart className="w-6 h-6 text-neutral-800" strokeWidth={1.5} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-semibold text-neutral-900 whitespace-nowrap tracking-normal">
+                  Premium Products
+                </h4>
+                <p className="text-xs text-neutral-500 mt-0.5 leading-snug font-normal">
+                  100% genuine brands
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 flex items-center justify-center bg-neutral-50 border border-neutral-200 shrink-0 shadow-2xs">
+                <Clock className="w-6 h-6 text-neutral-800" strokeWidth={1.5} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-semibold text-neutral-900 whitespace-nowrap tracking-normal">
+                  Open 7 Days
+                </h4>
+                <p className="text-xs text-neutral-500 mt-0.5 leading-snug font-normal">
+                  10:00 AM – 9:30 PM (Thu: 9 PM)
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 flex items-center justify-center bg-neutral-50 border border-neutral-200 shrink-0 shadow-2xs">
+                <Star className="w-6 h-6 text-neutral-800" strokeWidth={1.5} />
+              </div>
+              <div className="min-w-0">
+                <h4 className="text-sm sm:text-[15px] font-semibold text-neutral-900 whitespace-nowrap tracking-normal">
+                  Hygiene First
+                </h4>
+                <p className="text-xs text-neutral-500 mt-0.5 leading-snug font-normal">
+                  Sanitized & single-use
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -207,8 +225,8 @@ export default function ParlourPage() {
                   src={cat.image}
                   alt={cat.category}
                   fill
-                  quality={95}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={100}
+                  sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover"
                 />
               </div>
@@ -236,7 +254,7 @@ export default function ParlourPage() {
 
                 <div className="pt-2">
                   <a
-                    href="tel:+918924099911"
+                    href="tel:+919839200169"
                     className="inline-flex items-center gap-2 text-xs font-semibold text-neutral-900 hover:text-neutral-600"
                   >
                     <span>Book For This Service</span>
@@ -279,7 +297,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/1.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/1.jpeg" alt="Gallery 1" fill className="object-cover" />
+              <Image src="/parlor/1.jpeg" alt="Gallery 1" fill quality={100} sizes="(max-width: 768px) 50vw, 350px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -290,7 +308,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/2.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/2.jpeg" alt="Gallery 2" fill className="object-cover" />
+              <Image src="/parlor/2.jpeg" alt="Gallery 2" fill quality={100} sizes="(max-width: 768px) 50vw, 350px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -301,7 +319,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/3.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/3.jpeg" alt="Gallery 3" fill className="object-cover" />
+              <Image src="/parlor/3.jpeg" alt="Gallery 3" fill quality={100} sizes="(max-width: 768px) 50vw, 350px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -312,7 +330,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/4.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/4.jpeg" alt="Gallery 4" fill className="object-cover" />
+              <Image src="/parlor/4.jpeg" alt="Gallery 4" fill quality={100} sizes="(max-width: 768px) 50vw, 350px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -323,7 +341,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/5.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/5.jpeg" alt="Gallery 5" fill className="object-cover" />
+              <Image src="/parlor/5.jpeg" alt="Gallery 5" fill quality={100} sizes="(max-width: 768px) 50vw, 350px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -334,7 +352,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/6.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-1 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/6.jpeg" alt="Gallery 6" fill className="object-cover" />
+              <Image src="/parlor/6.jpeg" alt="Gallery 6" fill quality={100} sizes="(max-width: 768px) 50vw, 350px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -345,7 +363,7 @@ export default function ParlourPage() {
               onClick={() => setSelectedMedia({ type: 'image', src: '/parlor/7.jpeg' })}
               className="relative rounded-2xl overflow-hidden group shadow-sm col-span-2 row-span-1 bg-neutral-100 cursor-pointer"
             >
-              <Image src="/parlor/7.jpeg" alt="Gallery 7" fill className="object-cover" />
+              <Image src="/parlor/7.jpeg" alt="Gallery 7" fill quality={100} sizes="(max-width: 768px) 100vw, 700px" className="object-cover" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                 <ZoomIn className="text-white w-8 h-8" />
               </div>
@@ -387,7 +405,7 @@ export default function ParlourPage() {
 
                 <div className="mt-8 pt-6 border-t border-neutral-800">
                   <a
-                    href="tel:+918924099911"
+                    href="tel:+919839200169"
                     className="block w-full text-center py-3 bg-white hover:bg-neutral-100 text-neutral-900 rounded-xl text-xs font-semibold tracking-wide transition-colors shadow-sm"
                   >
                     Book Slot
@@ -411,7 +429,7 @@ export default function ParlourPage() {
                 Book A Salon Appointment
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 mt-1 font-normal">
-                Submit your preferred date and service, or call us directly at <strong>+91 89240 99911</strong>.
+                Submit your preferred date and service, or call us directly at <strong>+91 98392 00169</strong>.
               </p>
             </div>
 

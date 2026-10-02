@@ -101,7 +101,8 @@ export default function AboutPage() {
                   src="/1.jpeg"
                   alt="Jesika Fashion Varanasi Store Collection"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  quality={100}
+                  sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover"
                   priority
                 />
@@ -122,8 +123,8 @@ export default function AboutPage() {
                 src="/3.jpeg"
                 alt="Jesika Men's & Festive Wear"
                 fill
-                quality={95}
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={100}
+                sizes="(max-width: 1024px) 100vw, 450px"
                 className="object-cover"
               />
             </div>
@@ -132,8 +133,8 @@ export default function AboutPage() {
                 src="/5.jpeg"
                 alt="Jesika Family Wear & Studio"
                 fill
-                quality={95}
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={100}
+                sizes="(max-width: 1024px) 100vw, 450px"
                 className="object-cover"
               />
             </div>
@@ -240,8 +241,8 @@ export default function AboutPage() {
                   src={dept.image}
                   alt={dept.title}
                   fill
-                  quality={95}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  quality={100}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 350px"
                   className="object-cover"
                 />
               </div>

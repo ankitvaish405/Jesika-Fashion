@@ -85,7 +85,7 @@ const jsonLd = {
   "image": "https://jesikafashion.com/logo.png",
   "description": "Complete Family Fashion Store & Beauty Parlour in Varanasi since 2003. Banarasi Sarees, Lehengas, Sherwanis, Kids Wear, and HD Bridal Makeover.",
   "foundingDate": "2003",
-  "telephone": "+918924099911",
+  "telephone": "+919839200169",
   "email": "info@jesikafashion.com",
   "priceRange": "₹₹",
   "address": {
@@ -93,7 +93,7 @@ const jsonLd = {
     "streetAddress": "Madan Mohan Malviya Rd Panch Koshi, Near Panch Koshi Chauraha, Paigambapur, Asapur, Rasulabad",
     "addressLocality": "Varanasi",
     "addressRegion": "Uttar Pradesh",
-    "postalCode": "221002",
+    "postalCode": "221027",
     "addressCountry": "IN"
   },
   "geo": {

@@ -31,7 +31,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'How do I book an appointment for the Beauty Parlour or Bridal Makeover?',
     answer:
-      'Booking is very easy and fast! You can click our WhatsApp button to message us directly, call us on +91 89240 99911, or walk straight into our store. For bridal makeovers, pre-bridal packages, and party makeup, we recommend booking a few days in advance so our senior makeup artists can reserve a dedicated slot and offer you a personalized consultation.',
+      'Booking is very easy and fast! You can click our WhatsApp button to message us directly, call us on +91 98392 00169, or walk straight into our store. For bridal makeovers, pre-bridal packages, and party makeup, we recommend booking a few days in advance so our senior makeup artists can reserve a dedicated slot and offer you a personalized consultation.',
     category: 'Beauty Parlour & Appointments',
   },
   {
@@ -43,7 +43,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'What are your store operational timings and exact location in Varanasi?',
     answer:
-      'We are open all 7 days a week! Our store hours are 10:00 AM – 9:30 PM from Friday to Wednesday, and 10:00 AM – 9:00 PM on Thursdays. We are conveniently located at Madan Mohan Malviya Rd Panch Koshi, Near Panch Koshi Chauraha, Paigambapur, Asapur, Varanasi (UP 221002) with accessible road access and parking.',
+      'We are open all 7 days a week! Our store hours are 10:00 AM – 9:30 PM from Friday to Wednesday, and 10:00 AM – 9:00 PM on Thursdays. We are conveniently located at Madan Mohan Malviya Rd Panch Koshi, Near Panch Koshi Chauraha, Paigambapur, Asapur, Varanasi (UP 221027) with accessible road access and parking.',
     category: 'Timings & Location',
   },
   {
@@ -61,7 +61,7 @@ export default function FAQSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const phoneNumber = '918924099911';
+  const phoneNumber = '919839200169';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     'Hello Jesika Fashion, I have a question regarding store products and parlour services.'
   )}`;

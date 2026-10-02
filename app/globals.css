@@ -38,7 +38,10 @@ body {
   color: #29201d;
 }
 
-/* Crisp image rendering */
+/* High fidelity crisp image rendering */
 img {
-  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }

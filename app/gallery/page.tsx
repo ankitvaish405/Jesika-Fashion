@@ -75,9 +75,6 @@ export default function GalleryPage() {
       {/* 1. Header Banner */}
       <div className="border-b border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-          <p className="text-xs uppercase tracking-widest text-amber-800 font-bold mb-2">
-            Est. 2003 • The Complete Family Lookbook
-          </p>
           <h1 className="text-3xl sm:text-5xl font-sans font-bold tracking-tight text-neutral-900">
             Jesika Visual Archive
           </h1>
@@ -117,8 +114,8 @@ export default function GalleryPage() {
                 src={item.src}
                 alt={item.title}
                 fill
-                quality={95}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={100}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -137,7 +134,7 @@ export default function GalleryPage() {
             Whether it&apos;s a bridal makeover, a fresh new haircut, or a relaxing spa session, our expert stylists are here to bring out your best look.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="tel:+918924099911" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#000] text-white px-8 py-4 rounded-none text-sm font-bold hover:bg-[#1f2b20] transition-colors shadow-sm">
+            <a href="tel:+919839200169" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#000] text-white px-8 py-4 rounded-none text-sm font-bold hover:bg-[#1f2b20] transition-colors shadow-sm">
               <Phone className="w-4 h-4 " />
               <span>Book Appointment</span>
             </a>

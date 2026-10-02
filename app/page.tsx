@@ -151,11 +151,11 @@ export default function HomePage() {
                 src="/3.jpeg"
                 alt="Women's Wear Collection"
                 fill
-                quality={95}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
                   Women&apos;s Wear
                 </h3>
@@ -171,11 +171,11 @@ export default function HomePage() {
                 src="/2.jpeg"
                 alt="Men's Wear Collection"
                 fill
-                quality={95}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
                   Men&apos;s Wear
                 </h3>
@@ -191,11 +191,11 @@ export default function HomePage() {
                 src="/4.jpeg"
                 alt="Kids' Wear Collection"
                 fill
-                quality={95}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
                   Kids&apos; Wear
                 </h3>
@@ -211,11 +211,11 @@ export default function HomePage() {
                 src="/parlor/3.jpeg"
                 alt="Beauty Parlour & Salon"
                 fill
-                quality={95}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg sm:text-xl font-semibold mb-1">
                   Beauty Parlour
                 </h3>
@@ -234,26 +234,22 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            {/* Logo Medallion & Badge */}
-            <div className="lg:col-span-4 flex flex-col items-center text-center">
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-amber-500/40 shadow-2xl p-1 bg-black/40 group-hover:scale-105 transition-transform duration-300">
+            {/* Storefront Image & Badge */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden border-2 border-amber-500/30 shadow-2xl bg-black/40 group">
                 <Image
-                  src="/logo.png"
-                  alt="Jesika Fashion Medallion Logo"
+                  src="/1.jpeg"
+                  alt="Jesika Fashion Store Front Varanasi"
                   fill
-                  sizes="(max-width: 768px) 160px, 192px"
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 450px"
                   className="object-cover"
                 />
-              </div>
-              <div className="mt-4">
-                <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/20 text-[#e9be87] border border-amber-500/30">
-                  Established 2003 • Varanasi
-                </span>
               </div>
             </div>
 
             {/* Narrative Content */}
-            <div className="lg:col-span-8 space-y-5">
+            <div className="lg:col-span-7 space-y-5">
               <div className="space-y-1.5">
                 <p className="text-xs uppercase tracking-widest text-[#cbb193] font-semibold">
                   A Legacy of 23+ Years in Varanasi
@@ -331,8 +327,8 @@ export default function HomePage() {
                     src={item.image}
                     alt={item.name}
                     fill
-                    quality={95}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={100}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 350px"
                     className="object-cover"
                   />
                 </div>
@@ -353,7 +349,7 @@ export default function HomePage() {
                     {/* <span className="text-sm font-bold text-neutral-900">{item.price}</span> */}
                     <div className="flex items-center gap-2.5">
                       <a
-                        href={`https://wa.me/918924099911?text=${encodeURIComponent(`Hi Jesika Fashion, I would like to inquire about ${item.name} (${item.category}) priced at ${item.price}`)}`}
+                        href={`https://wa.me/919839200169?text=${encodeURIComponent(`Hi Jesika Fashion, I would like to inquire about ${item.name} (${item.category}) priced at ${item.price}`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[11px] uppercase tracking-wider font-semibold text-neutral-700 hover:text-[#9d735d]"
@@ -363,7 +359,7 @@ export default function HomePage() {
                       </a>
                       <span className="text-neutral-300">|</span>
                       <a
-                        href="tel:+918924099911"
+                        href="tel:+919839200169"
                         className="text-[11px] uppercase tracking-wider font-medium text-neutral-600 hover:text-neutral-900"
                       >
                         Call
@@ -413,8 +409,8 @@ export default function HomePage() {
                   src="/8.jpeg"
                   alt="Jesika Fashion Store Collection"
                   fill
-                  quality={95}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={100}
+                  sizes="(max-width: 1024px) 100vw, 550px"
                   className="object-cover"
                 />
               </div>
@@ -423,8 +419,8 @@ export default function HomePage() {
                   src="/parlor/7.jpeg"
                   alt="Jesika Beauty Parlour Treatment"
                   fill
-                  quality={95}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={100}
+                  sizes="(max-width: 1024px) 100vw, 550px"
                   className="object-cover"
                 />
               </div>
@@ -508,8 +504,8 @@ export default function HomePage() {
                 src={img.src}
                 alt="Instagram post"
                 fill
-                quality={95}
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                quality={100}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-medium tracking-wider">

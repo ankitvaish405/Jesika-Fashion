@@ -44,13 +44,13 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-[#faf7f2] transition-colors leading-relaxed"
                 >
-                  Madan Mohan Malviya Rd Panch Koshi, Near Panch Koshi Chauraha, Paigambapur, Asapur, Rasulabad, Varanasi, UP 221002
+                  Madan Mohan Malviya Rd Panch Koshi, Near Panch Koshi Chauraha, Paigambapur, Asapur, Rasulabad, Varanasi, UP 221027
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#cbb193] shrink-0" />
-                <a href="tel:+918924099911" className="hover:text-[#faf7f2] transition-colors font-semibold">
-                  +91 89240 99911
+                <a href="tel:+919839200169" className="hover:text-[#faf7f2] transition-colors font-semibold">
+                  +91 98392 00169
                 </a>
               </div>
               <div className="flex items-center gap-2">
