@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { X, Phone } from 'lucide-react';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { X, Phone } from "lucide-react";
 
 interface GalleryItem {
   id: number;
@@ -17,58 +17,268 @@ const ALL_GALLERY_IMAGES: GalleryItem[] = [
   // Storefront & Overview
 
   // Men's Wear
-  { id: 2, src: '/2.jpeg', title: 'Men’s Denim Jeans & Formal Trousers Rack', categories: ["Men's Wear"], season: 'Everyday & Casuals' },
-  { id: 14, src: '/14.jpeg', title: 'Men’s & Boys’ Branded Denim & Shirts', categories: ["Men's Wear", "Kids' Wear"], season: 'Denim Lounge' },
-  { id: 26, src: '/26.jpeg', title: 'Boys’ & Men’s Kurta Sets, Sherwanis & Suits', categories: ["Men's Wear", "Kids' Wear"], season: 'Festive Wear' },
-  
+  {
+    id: 2,
+    src: "/2.jpeg",
+    title: "Men’s Denim Jeans & Formal Trousers Rack",
+    categories: ["Men's Wear"],
+    season: "Everyday & Casuals",
+  },
+  {
+    id: 14,
+    src: "/14.jpeg",
+    title: "Men’s & Boys’ Branded Denim & Shirts",
+    categories: ["Men's Wear", "Kids' Wear"],
+    season: "Denim Lounge",
+  },
+  {
+    id: 26,
+    src: "/26.jpeg",
+    title: "Boys’ & Men’s Kurta Sets, Sherwanis & Suits",
+    categories: ["Men's Wear", "Kids' Wear"],
+    season: "Festive Wear",
+  },
+
   // Women's Wear & Sarees
-  { id: 3, src: '/3.jpeg', title: 'Handloom Banarasi Silk Sarees & Ethnic Section', categories: ["Women's Wear"], season: 'Heritage Silks' },
-  { id: 7, src: '/7.jpeg', title: 'Authentic Banarasi Silk & Zari Weave Sarees', categories: ["Women's Wear", 'Bridal Collection'], season: 'Bridal Silks' },
-  { id: 8, src: '/8.jpeg', title: 'Bridal Lehengas & Heavy Embroidered Suits Aisle', categories: ["Women's Wear", 'Bridal Collection'], season: 'Bridal Couture' },
-  { id: 10, src: '/10.jpeg', title: 'Designer Embroidered Kurtis & Anarkali Suits', categories: ["Women's Wear"], season: 'Festive Collection' },
-  { id: 11, src: '/11.jpeg', title: 'Regal Handcrafted Zardozi Bridal Lehengas Wall', categories: ["Women's Wear", 'Bridal Collection'], season: 'Bridal Couture' },
-  { id: 15, src: '/15.jpeg', title: 'Traditional Saree & Suit Shopping Lounge', categories: ["Women's Wear"], season: 'Store Experience' },
-  { id: 18, src: '/18.jpeg', title: 'Curated Bridal Lehengas & Wedding Trousseau', categories: ["Women's Wear", 'Bridal Collection'], season: 'Bridal Trousseau' },
-  { id: 19, src: '/19.jpeg', title: 'Grand Family Fashion Floor & Saree Counter', categories: ["Women's Wear", 'Cosmetics & Jewellery'], season: 'Family Shopping' },
-  { id: 23, src: '/23.jpeg', title: 'Traditional Varanasi Silk & Festive Wear Section', categories: ["Women's Wear"], season: 'Heritage Festive' },
-  { id: 24, src: '/24.jpeg', title: 'Pure Silk Festive Sarees & Handloom Weaves', categories: ["Women's Wear"], season: 'Silk Wardrobe' },
-  { id: 25, src: '/25.jpeg', title: 'Showroom Saree Counter & Accessories Corridor', categories: ["Women's Wear", 'Cosmetics & Jewellery'], season: 'Visual Gallery' },
+  {
+    id: 3,
+    src: "/3.jpeg",
+    title: "Handloom Banarasi Silk Sarees & Ethnic Section",
+    categories: ["Women's Wear"],
+    season: "Heritage Silks",
+  },
+  {
+    id: 7,
+    src: "/7.jpeg",
+    title: "Authentic Banarasi Silk & Zari Weave Sarees",
+    categories: ["Women's Wear", "Bridal Collection"],
+    season: "Bridal Silks",
+  },
+  {
+    id: 8,
+    src: "/8.jpeg",
+    title: "Bridal Lehengas & Heavy Embroidered Suits Aisle",
+    categories: ["Women's Wear", "Bridal Collection"],
+    season: "Bridal Couture",
+  },
+  {
+    id: 10,
+    src: "/10.jpeg",
+    title: "Designer Embroidered Kurtis & Anarkali Suits",
+    categories: ["Women's Wear"],
+    season: "Festive Collection",
+  },
+  {
+    id: 11,
+    src: "/11.jpeg",
+    title: "Regal Handcrafted Zardozi Bridal Lehengas Wall",
+    categories: ["Women's Wear", "Bridal Collection"],
+    season: "Bridal Couture",
+  },
+  {
+    id: 15,
+    src: "/15.jpeg",
+    title: "Traditional Saree & Suit Shopping Lounge",
+    categories: ["Women's Wear"],
+    season: "Store Experience",
+  },
+  {
+    id: 18,
+    src: "/18.jpeg",
+    title: "Curated Bridal Lehengas & Wedding Trousseau",
+    categories: ["Women's Wear", "Bridal Collection"],
+    season: "Bridal Trousseau",
+  },
+  {
+    id: 19,
+    src: "/19.jpeg",
+    title: "Grand Family Fashion Floor & Saree Counter",
+    categories: ["Women's Wear", "Cosmetics & Jewellery"],
+    season: "Family Shopping",
+  },
+  {
+    id: 23,
+    src: "/23.jpeg",
+    title: "Traditional Varanasi Silk & Festive Wear Section",
+    categories: ["Women's Wear"],
+    season: "Heritage Festive",
+  },
+  {
+    id: 24,
+    src: "/24.jpeg",
+    title: "Pure Silk Festive Sarees & Handloom Weaves",
+    categories: ["Women's Wear"],
+    season: "Silk Wardrobe",
+  },
+  {
+    id: 25,
+    src: "/25.jpeg",
+    title: "Showroom Saree Counter & Accessories Corridor",
+    categories: ["Women's Wear", "Cosmetics & Jewellery"],
+    season: "Visual Gallery",
+  },
 
   // Kids' Wear
-  { id: 4, src: '/4.jpeg', title: 'Girls’ Festive Frocks & Princess Party Dresses', categories: ["Kids' Wear"], season: 'Kids Festive' },
-  { id: 9, src: '/9.jpeg', title: 'Boys’ & Girls’ Karrom Boy & Casual Wear', categories: ["Kids' Wear"], season: 'Kids Casuals' },
-  { id: 12, src: '/12.jpeg', title: 'Kids’ Complete Festive & Party Wear Department', categories: ["Kids' Wear"], season: 'Kids Collection' },
-  { id: 27, src: '/27.jpeg', title: 'Baby & Girls’ Designer Gowns & Ethnic Sets', categories: ["Kids' Wear"], season: 'Princess Wardrobe' },
-  { id: 28, src: '/child.webp', title: 'Family Royal Collection & Kids’ Festive Ensembles', categories: ["Kids' Wear", "Men's Wear", "Women's Wear", 'Bridal Collection'], season: 'Family Lookbook' },
+  {
+    id: 4,
+    src: "/4.jpeg",
+    title: "Girls’ Festive Frocks & Princess Party Dresses",
+    categories: ["Kids' Wear"],
+    season: "Kids Festive",
+  },
+  {
+    id: 9,
+    src: "/9.jpeg",
+    title: "Boys’ & Girls’ Karrom Boy & Casual Wear",
+    categories: ["Kids' Wear"],
+    season: "Kids Casuals",
+  },
+  {
+    id: 12,
+    src: "/12.jpeg",
+    title: "Kids’ Complete Festive & Party Wear Department",
+    categories: ["Kids' Wear"],
+    season: "Kids Collection",
+  },
+  {
+    id: 27,
+    src: "/27.jpeg",
+    title: "Baby & Girls’ Designer Gowns & Ethnic Sets",
+    categories: ["Kids' Wear"],
+    season: "Princess Wardrobe",
+  },
+  {
+    id: 28,
+    src: "/child.webp",
+    title: "Family Royal Collection & Kids’ Festive Ensembles",
+    categories: [
+      "Kids' Wear",
+      "Men's Wear",
+      "Women's Wear",
+      "Bridal Collection",
+    ],
+    season: "Family Lookbook",
+  },
 
   // Cosmetics & Jewellery & Accessories
-  { id: 5, src: '/5.jpeg', title: 'Bridal Chuda & Designer Bangles Collection', categories: ['Cosmetics & Jewellery', 'Bridal Collection'], season: 'Bridal Jewellery' },
-  { id: 13, src: '/13.jpeg', title: 'Designer Ladies Sandals & Bridal Footwear', categories: ['Cosmetics & Jewellery', 'Bridal Collection'], season: 'Footwear Lounge' },
-  { id: 16, src: '/16.jpeg', title: 'Premium Ladies Handbags & Bridal Clutches', categories: ['Cosmetics & Jewellery', 'Bridal Collection'], season: 'Accessories' },
-  { id: 17, src: '/17.jpeg', title: 'Bridal Bangles, Cosmetics & Nail Studio', categories: ['Cosmetics & Jewellery', 'Bridal Collection'], season: 'Bridal Studio' },
-  { id: 20, src: '/20.jpeg', title: 'Bridal Kundan, Stone & Glass Bangle Vault', categories: ['Cosmetics & Jewellery', 'Bridal Collection'], season: 'Traditional Bangles' },
-  { id: 21, src: '/21.jpeg', title: 'Traditional Chuda & Multicolour Bangle Sets', categories: ['Cosmetics & Jewellery', 'Bridal Collection'], season: 'Festive Bangles' },
-  { id: 22, src: '/22.jpeg', title: 'Branded Perfumes, Skincare & Luxury Cosmetics', categories: ['Cosmetics & Jewellery'], season: 'Beauty Care' },
+  {
+    id: 5,
+    src: "/5.jpeg",
+    title: "Bridal Chuda & Designer Bangles Collection",
+    categories: ["Cosmetics & Jewellery", "Bridal Collection"],
+    season: "Bridal Jewellery",
+  },
+  {
+    id: 13,
+    src: "/13.jpeg",
+    title: "Designer Ladies Sandals & Bridal Footwear",
+    categories: ["Cosmetics & Jewellery", "Bridal Collection"],
+    season: "Footwear Lounge",
+  },
+  {
+    id: 16,
+    src: "/16.jpeg",
+    title: "Premium Ladies Handbags & Bridal Clutches",
+    categories: ["Cosmetics & Jewellery", "Bridal Collection"],
+    season: "Accessories",
+  },
+  {
+    id: 17,
+    src: "/17.jpeg",
+    title: "Bridal Bangles, Cosmetics & Nail Studio",
+    categories: ["Cosmetics & Jewellery", "Bridal Collection"],
+    season: "Bridal Studio",
+  },
+  {
+    id: 20,
+    src: "/20.jpeg",
+    title: "Bridal Kundan, Stone & Glass Bangle Vault",
+    categories: ["Cosmetics & Jewellery", "Bridal Collection"],
+    season: "Traditional Bangles",
+  },
+  {
+    id: 21,
+    src: "/21.jpeg",
+    title: "Traditional Chuda & Multicolour Bangle Sets",
+    categories: ["Cosmetics & Jewellery", "Bridal Collection"],
+    season: "Festive Bangles",
+  },
+  {
+    id: 22,
+    src: "/22.jpeg",
+    title: "Branded Perfumes, Skincare & Luxury Cosmetics",
+    categories: ["Cosmetics & Jewellery"],
+    season: "Beauty Care",
+  },
 
   // Beauty Parlour Suite
-  { id: 29, src: '/parlor/7.jpeg', title: 'Jesika Beauty Parlour Complete Salon Suite', categories: ['Beauty Parlour', 'Bridal Collection'], season: 'Salon Suite' },
-  { id: 30, src: '/parlor/5.jpeg', title: 'Parlour VIP Waiting Lounge & Makeover Station', categories: ['Beauty Parlour'], season: 'Salon Lounge' },
-  { id: 31, src: '/parlor/3.jpeg', title: 'Hair Spa & Luxury Salon Wash Station', categories: ['Beauty Parlour'], season: 'Hair Therapy' },
-  { id: 32, src: '/parlor/1.jpeg', title: 'Facial Therapy & Bridal Radiance Treatment', categories: ['Beauty Parlour', 'Bridal Collection'], season: 'Bridal Glow' },
-  { id: 33, src: '/parlor/2.jpeg', title: 'Professional Bridal HD Makeover Session', categories: ['Beauty Parlour', 'Bridal Collection'], season: 'HD Makeover' },
-  { id: 34, src: '/parlor/6.jpeg', title: 'Pre-Bridal Grooming & Skin Nourishing Care', categories: ['Beauty Parlour'], season: 'Skin Care' },
+  {
+    id: 29,
+    src: "/parlor/7.jpeg",
+    title: "Jesika Beauty Parlour Complete Salon Suite",
+    categories: ["Beauty Parlour", "Bridal Collection"],
+    season: "Salon Suite",
+  },
+  {
+    id: 30,
+    src: "/parlor/5.jpeg",
+    title: "Parlour VIP Waiting Lounge & Makeover Station",
+    categories: ["Beauty Parlour"],
+    season: "Salon Lounge",
+  },
+  {
+    id: 31,
+    src: "/parlor/3.jpeg",
+    title: "Hair Spa & Luxury Salon Wash Station",
+    categories: ["Beauty Parlour"],
+    season: "Hair Therapy",
+  },
+  {
+    id: 32,
+    src: "/parlor/1.jpeg",
+    title: "Facial Therapy & Bridal Radiance Treatment",
+    categories: ["Beauty Parlour", "Bridal Collection"],
+    season: "Bridal Glow",
+  },
+  {
+    id: 33,
+    src: "/parlor/2.jpeg",
+    title: "Professional Bridal HD Makeover Session",
+    categories: ["Beauty Parlour", "Bridal Collection"],
+    season: "HD Makeover",
+  },
+  {
+    id: 34,
+    src: "/parlor/6.jpeg",
+    title: "Pre-Bridal Grooming & Skin Nourishing Care",
+    categories: ["Beauty Parlour"],
+    season: "Skin Care",
+  },
+  {
+    id: 35,
+    src: "/1.jpeg",
+    title: "Jesika Fashion Store Collection",
+    categories: ["Women's Wear", "Men's Wear"],
+    season: "Store Collection",
+  },
+  {
+    id: 36,
+    src: "/6.jpeg",
+    title: "Jesika Fashion Showroom Collection",
+    categories: ["Women's Wear", "Kids' Wear"],
+    season: "Showroom Collection",
+  },
+  {
+    id: 37,
+    src: "/parlor/4.jpeg",
+    title: "Beauty Parlour Styling Suite",
+    categories: ["Beauty Parlour"],
+    season: "Styling Suite",
+  },
 ];
 
-const CATEGORIES = ['All', "Men's Wear", "Women's Wear", "Kids' Wear", 'Bridal Collection', 'Beauty Parlour', 'Cosmetics & Jewellery'] as const;
-
 export default function GalleryPage() {
-  const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
-
-  const filteredImages =
-    activeCategory === 'All'
-      ? ALL_GALLERY_IMAGES
-      : ALL_GALLERY_IMAGES.filter((img) => img.categories.includes(activeCategory));
 
   return (
     <div className="min-h-screen bg-white text-neutral-900 font-sans pb-28">
@@ -79,32 +289,17 @@ export default function GalleryPage() {
             Jesika Visual Archive
           </h1>
           <p className="mt-3 text-sm sm:text-base text-neutral-600 max-w-lg mx-auto font-normal">
-            Celebrating 23+ years of Varanasi bridal couture, authentic Banarasi silks, men’s festive wear, kids’ outfits, and parlour transformations.
+            Celebrating 23+ years of Varanasi bridal couture, authentic Banarasi
+            silks, men’s festive wear, kids’ outfits, and parlour
+            transformations.
           </p>
         </div>
       </div>
 
-      {/* 2. Category Filter Tabs */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 border-b border-neutral-200 pb-6">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-xs font-medium tracking-wide transition-all cursor-pointer ${
-                activeCategory === cat
-                  ? 'bg-neutral-900 text-white shadow-xs'
-                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-neutral-900'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         {/* 3. Image Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-12">
-          {filteredImages.map((item) => (
+          {ALL_GALLERY_IMAGES.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedImage(item)}
@@ -116,9 +311,8 @@ export default function GalleryPage() {
                 fill
                 quality={100}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                className="object-cover "
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>
@@ -131,14 +325,22 @@ export default function GalleryPage() {
             Ready for your transformation?
           </h2>
           <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-medium">
-            Whether it&apos;s a bridal makeover, a fresh new haircut, or a relaxing spa session, our expert stylists are here to bring out your best look.
+            Whether it&apos;s a bridal makeover, a fresh new haircut, or a
+            relaxing spa session, our expert stylists are here to bring out your
+            best look.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="tel:+919839200169" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#000] text-white px-8 py-4 rounded-none text-sm font-bold hover:bg-[#1f2b20] transition-colors shadow-sm">
+            <a
+              href="tel:+919839200169"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#000] text-white px-8 py-4 rounded-none text-sm font-bold hover:bg-[#1f2b20] transition-colors shadow-sm"
+            >
               <Phone className="w-4 h-4 " />
               <span>Book Appointment</span>
             </a>
-            <Link href="/parlour" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent text-[#000] border border-[#000]  px-8 py-4 rounded-none text-sm font-bold transition-colors">
+            <Link
+              href="/parlour"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent text-[#000] border border-[#000]  px-8 py-4 rounded-none text-sm font-bold transition-colors"
+            >
               <span>View Services</span>
             </Link>
           </div>
@@ -175,14 +377,17 @@ export default function GalleryPage() {
           </div>
 
           {/* Image Details Badge */}
-          <div className="mt-4 text-center z-20 max-w-xl px-4" onClick={(e) => e.stopPropagation()}>
+          {/* <div
+            className="mt-4 text-center z-20 max-w-xl px-4"
+            onClick={(e) => e.stopPropagation()}
+          >
             <span className="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest bg-amber-500/20 text-[#e9be87] border border-amber-500/30 mb-2">
-              {selectedImage.categories.join(' • ')}
+              {selectedImage.categories.join(" • ")}
             </span>
             <h3 className="text-white text-sm sm:text-base font-medium">
               {selectedImage.title}
             </h3>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
