@@ -19,7 +19,7 @@ const BESTSELLERS = [
     name: 'Embroidered Banarasi Silk Saree',
     category: "Women's Wear",
     price: '₹4,500',
-    image: '/7.jpeg',
+    image: '/womens/2.jpeg',
     rating: 4.9,
   },
   {
@@ -27,7 +27,7 @@ const BESTSELLERS = [
     name: 'Royal Heritage Wedding Sherwani',
     category: "Men's Wear",
     price: '₹14,500',
-    image: '/14.jpeg',
+    image: '/mens/4.jpeg',
     rating: 5.0,
   },
   {
@@ -35,7 +35,7 @@ const BESTSELLERS = [
     name: 'Little Princess Festive Lehenga Choli',
     category: "Kids' Wear",
     price: '₹1,850',
-    image: '/9.jpeg',
+    image: '/kids/3.jpeg',
     rating: 4.9,
   },
   {
@@ -91,12 +91,12 @@ const STEPS = [
 
 
 const INSTAGRAM_IMAGES = [
-  { id: 16, src: '/16.jpeg', tag: '@jesika._.fashion' },
-  { id: 17, src: '/17.jpeg', tag: '@jesika._.fashion' },
-  { id: 18, src: '/18.jpeg', tag: '@jesika._.fashion' },
-  { id: 19, src: '/19.jpeg', tag: '@jesika._.fashion' },
-  { id: 20, src: '/20.jpeg', tag: '@jesika._.fashion' },
-  { id: 21, src: '/21.jpeg', tag: '@jesika._.fashion' },
+  { id: 1, src: '/womens/3.jpeg', tag: '@jesika._.fashion' },
+  { id: 2, src: '/mens/2.jpeg', tag: '@jesika._.fashion' },
+  { id: 3, src: '/womens/7.jpeg', tag: '@jesika._.fashion' },
+  { id: 4, src: '/parlor/5.jpeg', tag: '@jesika._.fashion' },
+  { id: 5, src: '/kids/2.jpeg', tag: '@jesika._.fashion' },
+  { id: 6, src: '/cosmetics/1.jpeg', tag: '@jesika._.fashion' },
 ];
 
 export default function HomePage() {
@@ -146,9 +146,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Card 1: Women's Wear */}
-            <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
+            <Link href="/gallery?category=womens" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/3.jpeg"
+                src="/womens/1.jpeg"
                 alt="Women's Wear Collection"
                 fill
                 quality={100}
@@ -166,9 +166,9 @@ export default function HomePage() {
             </Link>
 
             {/* Card 2: Men's Wear */}
-            <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
+            <Link href="/gallery?category=mens" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/2.jpeg"
+                src="/mens/1.jpeg"
                 alt="Men's Wear Collection"
                 fill
                 quality={100}
@@ -186,9 +186,9 @@ export default function HomePage() {
             </Link>
 
             {/* Card 3: Kids' Wear */}
-            <Link href="/gallery" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
+            <Link href="/gallery?category=kids" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
-                src="/4.jpeg"
+                src="/kids/1.jpeg"
                 alt="Kids' Wear Collection"
                 fill
                 quality={100}
@@ -206,7 +206,7 @@ export default function HomePage() {
             </Link>
 
             {/* Card 4: Beauty Parlour */}
-            <Link href="/parlour" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
+            <Link href="/gallery?category=parlor" className="group relative aspect-[3/4] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-2xs">
               <Image
                 src="/parlor/3.jpeg"
                 alt="Beauty Parlour & Salon"
@@ -406,7 +406,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 grid grid-cols-2 gap-4 sm:gap-6">
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#241c19] border border-[#382b26] shadow-md">
                 <Image
-                  src="/8.jpeg"
+                  src="/womens/8.jpeg"
                   alt="Jesika Fashion Store Collection"
                   fill
                   quality={100}
